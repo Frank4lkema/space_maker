@@ -7,6 +7,6 @@ class Space < ApplicationRecord
   validates :name, presence: true
   validates :address, presence: true
   validates :capacity, presence: true
-  validates :price, precence: true
+  validates :price, presence: true
 
 end
