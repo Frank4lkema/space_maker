@@ -1,1 +1,40 @@
 // Specific CSS for your home-page
+
+.homepage-banner {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.homepage-2-column-container {
+  max-width: 1024px;
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.homepage-2-column-content {
+  height: 500px;
+  flex: 1 0 300px;
+  padding: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.homepage-1-column-container {
+  max-width: 1024px;
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.homepage-1-column-content {
+  height: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
