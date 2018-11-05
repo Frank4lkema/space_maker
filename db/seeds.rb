@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-users = User.new([
+users = User.create([
   {
   email: "frank@gmail.com"
   password: "zonnetje"
@@ -27,46 +27,46 @@ users = User.new([
   },
 ])
 
-spaces =Space.create([
+spaces = Space.create([
   {
     name: "Frank's Basement"
     address: "Oudwijkervelststraat, Utrecht"
     capacity: 5
     price: 120.50
-    user_id: 1
+    user_id: users[0].id
   },
   {
     name: "Elad's Basement"
     address: "Prins Karelgrach, Amsterdam"
     capacity: 10
     price: 200.00
-    user_id: 2
+    user_id: users[1].id
   },
   {
     name: "Elad's Shak"
     address: "Prins Karelgrach, Amsterdam"
     capacity: 5
     price: 150.00
-    user_id: 2
+    user_id: users[2].id
   },
   {
     name: "Rob's Basement"
     address: "Amsterdamsestraatweg, Utrecht"
     capacity: 7
     price: 100.00
-    user_id: 3
+    user_id: users[0].id
   },
   {
     name: "Rob's Addic"
     address: "Amsterdamsestraatweg, Utrecht"
     capacity: 10
     price: 200.00
-    user_id: 3
+    user_id: users[1].id
   },
   {
     name: "Frank's Addic"
     address: "Oudwijkervelststraat, Utrecht"
     capacity: 12
     price: 200.00
-    user_id: 1
+    user_id: users[2].id
   }])
