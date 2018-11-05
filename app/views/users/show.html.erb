@@ -1,10 +1,10 @@
 <div class="container">
   <div>
     <div class="row">
-      <h1><%= @user.name %></h1>
+      <h1><%= @user.name.capitalize %></h1>
     </div>
     <div class="avatar">
-      <%= image_tag "source", alt: "avatar" %>
+
     </div>
   </div>
   <% @user.spaces.each do |space| %>
@@ -12,8 +12,5 @@
     <p><%= space.name %></p>
     <p> <%= space.address %> </p>
   </div>
-  <%= end %>
+  <% end %>
 </div>
-
-
-
