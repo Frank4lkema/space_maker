@@ -1,0 +1,8 @@
+<h1>Spaces</h1>
+
+
+<ul>
+  <% @spaces.each do |space| %>
+    <li><%= "#{space.name} owned by #{space.user.name} and cost €#{space.price}"%></li>
+  <% end %>
+</ul>
