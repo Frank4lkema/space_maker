@@ -1,0 +1,7 @@
+<h1>Spaces</h1>
+
+
+
+  <% @spaces.each do |space| %>
+    <p><%= "#{space.name} owned by #{space.user.name} and cost €#{space.price} located at #{space.address}"%></p>
+  <% end %>

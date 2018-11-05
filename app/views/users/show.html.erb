@@ -1,0 +1,16 @@
+<div class="container">
+  <div>
+    <div class="row">
+      <h1><%= @user.name.capitalize %></h1>
+    </div>
+    <div class="avatar">
+
+    </div>
+  </div>
+  <% @user.spaces.each do |space| %>
+  <div class="row">
+    <p><%= space.name %></p>
+    <p> <%= space.address %> </p>
+  </div>
+  <% end %>
+</div>

@@ -6,67 +6,64 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Space.delete_all
+User.delete_all
+
 users = User.create([
   {
-  email: "frank@gmail.com"
-  password: "zonnetje"
-  name: "Frank"
+  email: "frank@gmail.com",
+  password: "zonnetje",
+  name: "Frank",
   phone_number: "0641394590"
   },
   {
-  email: "elad@gmail.com"
-  password: "Football"
-  name: "elad"
+  email: "elad@gmail.com",
+  password: "Football",
+  name: "elad",
   phone_number: "0631293047"
-  },
-  {
-  email: "Rob@gmail.com"
-  password: "Weed"
-  name: "Rob"
-  phone_number: "0632345609"
-  },
+  }
 ])
 
 spaces = Space.create([
   {
-    name: "Frank's Basement"
-    address: "Oudwijkervelststraat, Utrecht"
-    capacity: 5
-    price: 120.50
+    name: "Frank's Basement",
+    address: "Oudwijkervelststraat, Utrecht",
+    capacity: 5,
+    price: 120.50,
     user_id: users[0].id
   },
   {
-    name: "Elad's Basement"
-    address: "Prins Karelgrach, Amsterdam"
-    capacity: 10
-    price: 200.00
+    name: "Elad's Basement",
+    address: "Prins Karelgrach, Amsterdam",
+    capacity: 10,
+    price: 200.00,
     user_id: users[1].id
   },
   {
-    name: "Elad's Shak"
-    address: "Prins Karelgrach, Amsterdam"
-    capacity: 5
-    price: 150.00
-    user_id: users[2].id
+    name: "Elad's Shak",
+    address: "Prins Karelgrach, Amsterdam",
+    capacity: 5,
+    price: 150.00,
+    user_id: users[1].id
   },
   {
-    name: "Rob's Basement"
-    address: "Amsterdamsestraatweg, Utrecht"
-    capacity: 7
-    price: 100.00
+    name: "Rob's Basement",
+    address: "Amsterdamsestraatweg, Utrecht",
+    capacity: 7,
+    price: 100.00,
     user_id: users[0].id
   },
   {
-    name: "Rob's Addic"
-    address: "Amsterdamsestraatweg, Utrecht"
-    capacity: 10
-    price: 200.00
+    name: "Rob's Addic",
+    address: "Amsterdamsestraatweg, Utrecht",
+    capacity: 10,
+    price: 200.00,
     user_id: users[1].id
   },
   {
-    name: "Frank's Addic"
-    address: "Oudwijkervelststraat, Utrecht"
-    capacity: 12
-    price: 200.00
-    user_id: users[2].id
+    name: "Frank's Addic",
+    address: "Oudwijkervelststraat, Utrecht",
+    capacity: 12,
+    price: 200.00,
+    user_id: users[1].id
   }])
