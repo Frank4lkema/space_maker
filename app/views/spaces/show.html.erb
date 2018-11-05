@@ -1,11 +1,14 @@
-<h1><%= @space.name %></h1>
+<div class="container">
+  <div class="row">
+    <div class="space-information col-lg-12">
+      <h1><%= @space.name %></h1>
+      <h3>Space information:</h3>
+      <p>Name: <%= @space.name %></p>
+      <p>Address: <%= @space.address %></p>
+      <p>Capacity: <%= @space.capacity %></p>
+      <p>Price: <%= @space.price %></p>
+      <%= link_to "Go back", spaces_path  %>
+    </div>
+  </div>
+</div>
 
-<%= image_tag("picture.jpg") %>
-
-<h3>Info:</h3>
-<p>Name: <%= @space.name %></p>
-<p>Address: <%= @space.address %></p>
-<p>Capacity: <%= @space.capacity %></p>
-<p>Price: <%= @space.price %></p>
-
-<%= link_to "Go back", spaces_path  %>
