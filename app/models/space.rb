@@ -2,7 +2,7 @@ class Space < ApplicationRecord
   # assosiations
   belongs_to :user
   has_many :bookings
-  has_many :pictures
+  has_many :pictures, dependent: :destroy
 
   #validations
   validates :name, presence: true
@@ -10,4 +10,10 @@ class Space < ApplicationRecord
   validates :capacity, presence: true
   validates :price, presence: true
 
+  # allows use to create a space including with pictures as a parent to child see link for more info
+  # https://api.rubyonrails.org/classes/ActiveRecord/NestedAttributes/ClassMethods.html
+  accepts_nested_attributes_for :pictures
+
 end
+
+

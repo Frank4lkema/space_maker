@@ -3,7 +3,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     authorize @user
 
-    @spaces = Space.where(user_id: params[:id])
+    @spaces = Space.where(user_id: @user)
   end
 
   def dashboard

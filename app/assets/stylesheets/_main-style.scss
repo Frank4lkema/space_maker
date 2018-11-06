@@ -1,0 +1,146 @@
+// NECESSARY FOR DEPENDANTS
+.test {
+  padding-top: 70px;
+}
+
+// MAIN TEXT STYLES
+h1 {
+  margin: 0px 0px 5px;
+  font-size: 64px;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 700;
+}
+
+h2 {
+  margin: 0px 0px 15px;
+  font-size: 32px;
+  font-family: proxima-nova, sans-serif;
+  font-style: italic;
+  font-weight: 300;
+}
+
+h3 {
+  margin: 0px 0px 20px;
+  font-size: 26px;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 700;
+}
+
+h4 {
+  margin: 0px 0px 5px;
+  font-size: 18px;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 700;
+}
+
+p {
+  margin: 0px 0px 20px;
+  letter-spacing: 0.2px;
+  line-height: 28px;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+
+// MAIN BUTTON STYLES
+.button {
+  display: inline-block;
+  margin: 0px auto;
+  padding: 8px 20px 12px;
+  margin-top: 15px;
+  border-radius: 3px;
+  letter-spacing: 0.2px;
+  color: #fff;
+  transition: padding 150ms ease;
+}
+
+.button:hover {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 30px 12px;
+}
+
+.button-primary {
+  background-color: #159CBC;
+}
+
+.button-primary:hover {
+  background-color: #0787A5;
+}
+
+.button-red {
+  background-color: #E81021;
+}
+
+.button-red:hover {
+  background-color: #D61616;
+}
+
+.button-green {
+  background-color: #2DC438;
+}
+
+.button-green:hover {
+  background-color: #2ABA2A;
+}
+
+.button-white {
+  background-color: #fff;
+  color: #159CBC;
+}
+
+.button-white:hover {
+  background-color: #F2F2F2;
+  color: #0787A5;
+}
+
+// MAIN SINGLE USE STYLES
+
+.centered-text {
+  text-align: center;
+}
+
+// MAIN LAYOUT STYLES
+.banner-main {
+  height: calc(100vh - 70px);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.banner-content {
+  text-align: center;
+}
+
+.main-container {
+  max-width: 1024px;
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.multi-column-container {
+  max-width: 1024px;
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.two-column-content {
+  height: 500px;
+  flex: 1 0 300px;
+  padding: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.one-column-content {
+  height: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

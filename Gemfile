@@ -17,6 +17,8 @@ gem 'devise'
 
 # Authorization gem
 gem "pundit"
+# carrierwave gem for uploading pictures
+gem 'carrierwave', '~> 1.2'
 
 # cloudinary gem
 gem 'cloudinary'
