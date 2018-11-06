@@ -1,0 +1,28 @@
+.avatar img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.username {
+  text-align: down;
+  margin-left: 50px;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 100px;
+  margin-left: 10px;
+}
+
+.row_card {
+  justify-content: space-between;
+  display: flex;
+}
+
+.card {
+  background-size: cover;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+}

@@ -1,16 +1,24 @@
 <div class="container">
-  <div>
-    <div class="row">
-      <h1><%= @user.name.capitalize %></h1>
-    </div>
-    <div class="avatar">
-
-    </div>
-  </div>
-  <% @user.spaces.each do |space| %>
   <div class="row">
-    <p><%= space.name %></p>
-    <p> <%= space.address %> </p>
+    <div class="avatar">
+      <%= image_tag("profile_avatar.jpg") %>
+    </div>
+    <div class="username">
+      <h1><%= @user.name.capitalize %></h1>
+      <p>Rating: 4/5 </p>
+    </div>
   </div>
-  <% end %>
+  <div class="container">
+    <div class="row_card">
+      <% @user.spaces.each do |space| %>
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path 'elad_shack.jpg' %>);">
+        <div class="col-xs-12 col-sm-4">
+          <h2><%= space.name %></h2>
+          <p> <%= space.address %> </p>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
 </div>
+
