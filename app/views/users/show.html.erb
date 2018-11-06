@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="row">
+  <div class="row" id="top_row">
     <div class="avatar">
       <%= image_tag("profile_avatar.jpg") %>
     </div>
@@ -7,8 +7,12 @@
       <h1><%= @user.name.capitalize %></h1>
       <p>Rating: 4/5 </p>
     </div>
+    <div>
+      <h1>About</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, beatae? Iure distinctio ullam ipsum ad laudantium totam, et reprehenderit aperiam unde veniam architecto, dolore incidunt consequatur cupiditate sint obcaecati error.</p>
+    </div>
   </div>
-  <div class="container">
+  <div class="card_container">
     <div class="row_card">
       <% @user.spaces.each do |space| %>
       <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= image_path 'elad_shack.jpg' %>);">
