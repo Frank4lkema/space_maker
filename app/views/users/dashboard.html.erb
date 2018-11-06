@@ -1,0 +1,10 @@
+<h1>This works</h1>
+
+<h1> <%= @user.name %></h1>
+
+<% @spaces.each do |space| %>
+<p><%= space.name %></p>
+<% end %>
+
+
+<%= link_to "sign out", destroy_user_session_path, method: :delete  %>
