@@ -1,0 +1,31 @@
+.index-container {
+  max-width: 1024px;
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.list-cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 0 500px;
+}
+
+.list-card {
+  flex: 1 0 auto;
+}
+
+.card-image {
+  width: 200px;
+  height: 100%;
+  float: left;
+}
+
+.list-card-info {
+  overflow: hidden;
+}
+
+.map-side {
+  width: 40%;
+}
