@@ -4,6 +4,10 @@
   height: 200px;
 }
 
+.avatar img:hover {
+  box-shadow: 0 0 5px black;
+}
+
 .username {
   margin-left: 50px;
   line-height: 140px;
@@ -26,6 +30,12 @@
   color: white;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.card:hover, .card:focus {
+  // transform: scale(1.05);
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
 }
 
 .card_container {
