@@ -13,4 +13,8 @@ Rails.application.routes.draw do
   get "space/:id/edit", to: 'spaces#edit', as: :space_edit
   delete "space/:id", to: 'spaces#destroy'
   get "spaces/:id", to: "spaces#show", as: :space
+  # resources :users do
+  #   resources :spaces
+  # end
 end
+
