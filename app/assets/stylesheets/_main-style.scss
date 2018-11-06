@@ -1,3 +1,8 @@
+// NECESSARY FOR DEPENDANTS
+.test {
+  padding-top: 70px;
+}
+
 // MAIN TEXT STYLES
 h1 {
   margin: 0px 0px 5px;
@@ -98,7 +103,7 @@ p {
 
 // MAIN LAYOUT STYLES
 .banner-main {
-  height: 100vh;
+  height: calc(100vh - 70px);
   display: flex;
   justify-content: space-around;
   align-items: center;
