@@ -15,6 +15,9 @@ gem 'dotenv-rails', groups: [:development, :test]
 # log in gem
 gem 'devise'
 
+# Authorization gem
+gem "pundit"
+
 # cloudinary gem
 gem 'cloudinary'
 
