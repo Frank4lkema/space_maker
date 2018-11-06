@@ -14,9 +14,8 @@ class SpacesController < ApplicationController
   end
 
   def create
-    @user = current_user
     @space = Space.new(space_params)
-    @space.user = @user
+    @space.user = current_user
     @space.save ? (redirect_to space_path(@space)) : (render :new)
   end
 
@@ -35,6 +34,6 @@ class SpacesController < ApplicationController
   private
 
   def space_params
-    params.require(:space).permit(:name,:address,:price, :capacity)
+    params.require(:space).permit(:name, :address, :price, :capacity)
   end
 end
