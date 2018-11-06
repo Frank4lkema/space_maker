@@ -2,14 +2,22 @@ class PicturesController < ApplicationController
 
 
   def edit
-
+    @picture = Picture.find(params[:id])
   end
 
   def update
-  respond_to do |format|
-    if @post_attachment.update(post_attachment_params)
-      format.html { redirect_to @post_attachment.post, notice: 'Post attachment was successfully updated.' }
+    @picture = Picture.find(params[:id])
+   if @picture.update(picture_params)
+    redirect_to dashboard_path
+    else
+    render :edit
     end
   end
-end
+
+
+  private
+
+  def picture_params
+    params.require(:picture).permit(:id, :space_id, :photo)
+  end
 end

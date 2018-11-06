@@ -1,11 +1,11 @@
 <h1>This works</h1>
 
 
-<%= cl_image_tag @picture.photo %>
+<%= cl_image_tag @picture.photo, height: 300, width: 400, crop: :fill %>
 <%= form_for(@picture) do |f| %>
   <div class="field">
-    <%= f.label :avatar %><br>
-    <%= f.file_field :avatar %>
+     <%= f.label :photo %><br>
+    <%= f.file_field :photo %>
   </div>
   <div class="actions">
     <%= f.submit %>
