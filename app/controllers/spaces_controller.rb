@@ -11,21 +11,37 @@ class SpacesController < ApplicationController
 
   def new
     @space = Space.new()
+    @pictures= @space.pictures.build
   end
 
   def create
     @space = Space.new(space_params)
     @space.user = current_user
-    @space.save ? (redirect_to space_path(@space)) : (render :new)
+    if @space.save
+      params[:pictures]['photo'].each do |a|
+        @picture= @space.pictures.create!(:photo => a)
+      end
+      (redirect_to space_path(@space))
+    else
+      (render :new)
+    end
   end
 
   def edit
     @space = Space.find(params[:id])
+    @pictures = @space.pictures
   end
 
   def update
     @space = Space.find(params[:id])
-    @space.update(space_params) ? (redirect_to space_path(@space)) : (render :edit)
+    if @space.update(space_params)
+      params[:pictures]['photo'].each_with_index do |a,i|
+        @picture= @space.pictures[i].update(:photo => a)
+      end
+      (redirect_to space_path(@space))
+    else
+      (render :edit)
+    end
   end
 
 
@@ -34,6 +50,6 @@ class SpacesController < ApplicationController
   private
 
   def space_params
-    params.require(:space).permit(:name, :address, :price, :capacity)
+    params.require(:space).permit(:name, :address, :price, :capacity , pictures_attributes: [:id,:space_id,:photo])
   end
 end
