@@ -8,9 +8,9 @@ Rails.application.routes.draw do
   get "user/:id", to: "users#show"
   get "dashboard", to: "users#dashboard"
   get "spaces/new", to: "spaces#new"
-  post "space", to: "spaces#create"
+  post "spaces", to: "spaces#create"
   get "space/:id/edit", to: 'spaces#edit'
   patch "space/:id", to:'spaces#update'
   delete "space/:id", to: 'spaces#destroy'
-  get "spaces/:id", to: "spaces#show"
+  get "spaces/:id", to: "spaces#show", as: :space
 end
