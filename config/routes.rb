@@ -12,7 +12,11 @@ Rails.application.routes.draw do
   patch "spaces/:id", to:'spaces#update'
   get "space/:id/edit", to: 'spaces#edit', as: :space_edit
   delete "space/:id", to: 'spaces#destroy'
-  get "spaces/:id", to: "spaces#show", as: :space
   get "picture/:id", to: "pictures#edit", as: :edit_picture
   patch "picture/:id", to: "pictures#update", as: :picture
+  get "space/:id", to: "spaces#show", as: :space
+  # resources :users do
+  #   resources :spaces
+  # end
 end
+
