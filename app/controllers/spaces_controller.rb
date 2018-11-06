@@ -20,6 +20,13 @@ class SpacesController < ApplicationController
     @space.save ? (redirect_to space_path(@space)) : (render :new)
   end
 
+  def edit
+
+  end
+
+  def update
+
+  end
 
 
 
