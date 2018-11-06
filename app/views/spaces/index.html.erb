@@ -1,7 +1,32 @@
-<h1>Spaces</h1>
+<dev class="index-container">
+  <div class="list-cards">
+    <% @spaces.each do |space| %>
+      <div class="list-card">
+        <div class="card-image">Image</div>
+        <div class="list-card-info">
+          <h3><%= space.name %></h3>
+          <p><%= space.user.name %></p>
+          <p><%= space.price %></p>
+          <p><%= space.address %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="map-side">
+    <p>MAP</p>
+  </div>
+</dev>
 
 
 
-  <% @spaces.each do |space| %>
-    <p><%= "#{space.name} owned by #{space.user.name} and cost €#{space.price} located at #{space.address}"%></p>
-  <% end %>
+
+
+
+
+
+
+
+
+
+
+

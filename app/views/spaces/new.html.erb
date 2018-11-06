@@ -1,0 +1,13 @@
+<h1>Let's add a new space! </h1>
+
+<p><%= current_user.name %></p>
+
+<%= simple_form_for(@space) do |f| %>
+<%= f.input :name %>
+<%= f.input :address %>
+<%= f.input :price %>
+<%= f.input :capacity %>
+<%= f.button :submit %>
+
+<% end %>
+
