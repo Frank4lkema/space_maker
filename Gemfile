@@ -9,6 +9,9 @@ gem 'rails', '5.2.1'
 gem 'redis'
 
 
+# sercurity gem
+gem 'dotenv-rails', groups: [:development, :test]
+
 # log in gem
 gem 'devise'
 
