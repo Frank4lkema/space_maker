@@ -1,0 +1,44 @@
+.avatar img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.username {
+  margin-left: 50px;
+  line-height: 140px;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 100px;
+  margin-left: 10px;
+}
+
+.row_card {
+  justify-content: center;
+  display: flex;
+  align-content: space-between;
+}
+
+.card {
+  background-size: cover;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.card_container {
+  border: 1px lightgrey;
+  border-style: solid;
+  padding: 20px;
+}
+
+.row_about {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  border: 1px lightgrey;
+  border-style: solid;
+  padding: 20px;
+}
