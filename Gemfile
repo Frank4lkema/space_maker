@@ -9,8 +9,14 @@ gem 'rails', '5.2.1'
 gem 'redis'
 
 
+# sercurity gem
+gem 'dotenv-rails', groups: [:development, :test]
+
 # log in gem
 gem 'devise'
+
+# cloudinary gem
+gem 'cloudinary'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
