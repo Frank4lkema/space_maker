@@ -15,6 +15,9 @@ gem 'dotenv-rails', groups: [:development, :test]
 # log in gem
 gem 'devise'
 
+# cloudinary gem
+gem 'cloudinary'
+
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
 gem 'font-awesome-sass', '~> 5.0.9'
