@@ -2,14 +2,15 @@
   <div class="row">
     <div class="space-information col-lg-12">
       <h1><%= @space.name %></h1>
+      <%= image_tag("franks_basement.jpg") %>
       <h3>Space information:</h3>
       <p>Name: <%= @space.name %></p>
       <p>Address: <%= @space.address %></p>
       <p>Capacity: <%= @space.capacity %></p>
       <p>Price: <%= @space.price %></p>
-      <%= link_to "Go back", spaces_path  %>
-      <%= link_to "Dashboard", dashboard_path  %>
+
     </div>
   </div>
 </div>
-
+<%= link_to "Go back", spaces_path, class: "btn btn-primary"  %>
+<%= link_to "Dashboard", dashboard_path  %>
