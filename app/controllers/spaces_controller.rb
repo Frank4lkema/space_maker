@@ -17,13 +17,7 @@ class SpacesController < ApplicationController
     @user = current_user
     @space = Space.new(space_params)
     @space.user = @user
-
-
-    if @space.save
-      redirect_to space_path(@space)
-    else
-      render :new
-    end
+    @space.save ? (redirect_to space_path(@space)) : (render :new)
   end
 
 
