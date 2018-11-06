@@ -5,3 +5,6 @@
 <% @spaces.each do |space| %>
 <p><%= space.name %></p>
 <% end %>
+
+
+<%= link_to "sign out", destroy_user_session_path, method: :delete  %>
