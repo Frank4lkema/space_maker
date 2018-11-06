@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="space-information col-lg-12">
+    <div class="space-information col-sm-offset-3 col-sm-4">
       <h1><%= @space.name %></h1>
       <%= image_tag("franks_basement.jpg") %>
       <h3>Space information:</h3>
@@ -8,21 +8,8 @@
       <p>Address: <%= @space.address %></p>
       <p>Capacity: <%= @space.capacity %></p>
       <p>Price: <%= @space.price %></p>
-
     </div>
   </div>
 </div>
 <%= link_to "Go back", spaces_path, class: "btn btn-primary"  %>
 <%= link_to "Dashboard", dashboard_path  %>
-
-
-<br>
-<br>
-<br>
-<% @space.pictures.each do |p| %>
-    <%= cl_image_tag p.photo, height: 300, width: 400, crop: :fill %>
-    <%= link_to "Edit Picture", edit_picture_path(p) %>
-<% end %>
-
-
-
