@@ -15,6 +15,8 @@ gem 'dotenv-rails', groups: [:development, :test]
 # log in gem
 gem 'devise'
 
+# Authorization gem
+gem "pundit"
 # carrierwave gem for uploading pictures
 gem 'carrierwave', '~> 1.2'
 
