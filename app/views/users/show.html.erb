@@ -5,7 +5,7 @@
     </div>
     <div class="username">
       <div>
-        <h1><%= @user.name.capitalize %></h1>
+        <h2><%= @user.name.capitalize %></h2>
       </div>
       <div>
         <p>Rating: 4/5 </p>
@@ -14,14 +14,14 @@
   </div>
     <div class="row_about">
       <div>
-        <h1>About</h1>
+        <h3>About</h3>
       </div>
       <div>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, beatae? Iure distinctio ullam ipsum ad laudantium totam, et reprehenderit aperiam unde veniam architecto, dolore incidunt consequatur cupiditate sint obcaecati error.</p>
       </div>
     </div>
   <div class="card_container">
-    <h1>My Spaces</h1>
+    <h3>My Spaces</h3>
     <div class="row_card">
       <% @user.spaces.each do |space| %>
       <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url( <%= image_path 'elad_shack.jpg' %>);">
