@@ -50,10 +50,14 @@ class SpacesController < ApplicationController
     @space = Space.find(params[:id])
     authorize @space
     if @space.update(space_params)
-      params[:pictures]['photo'].each_with_index do |a,i|
-        @picture= @space.pictures[i].update(:photo => a)
+      if params[:pictures].nil?
+        redirect_to space_path(@space)
+      else
+        params[:pictures]['photo'].each_with_index do |a,i|
+          @picture= @space.pictures[i].update(:photo => a)
+        end
+        (redirect_to space_path(@space))
       end
-      (redirect_to space_path(@space))
     else
       (render :edit)
     end
