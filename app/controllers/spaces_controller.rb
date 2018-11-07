@@ -1,22 +1,25 @@
 class SpacesController < ApplicationController
 
   def index
-    @spaces = Space.all
+    @spaces = policy_scope(Space)
   end
 
   def show
     @space = Space.find(params[:id])
-
+    authorize @space
   end
 
   def new
     @space = Space.new()
     @pictures= @space.pictures.build
+
+    authorize @space
   end
 
   def create
     @space = Space.new(space_params)
     @space.user = current_user
+    authorize @space
     if @space.save
       params[:pictures]['photo'].each do |a|
         @picture= @space.pictures.create!(:photo => a)
@@ -29,11 +32,13 @@ class SpacesController < ApplicationController
 
   def edit
     @space = Space.find(params[:id])
+    authorize @space
     @pictures = @space.pictures
   end
 
   def update
     @space = Space.find(params[:id])
+    authorize @space
     if @space.update(space_params)
       params[:pictures]['photo'].each_with_index do |a,i|
         @picture= @space.pictures[i].update(:photo => a)
@@ -43,9 +48,6 @@ class SpacesController < ApplicationController
       (render :edit)
     end
   end
-
-
-
 
   private
 
