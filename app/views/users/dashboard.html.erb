@@ -1,11 +1,73 @@
-<h3><%= @user.name %></h3>
+<div class="dashboard-container">
 
-<% @user.spaces.each do |space| %>
-<p><%= space.name %> <span> <%= link_to "edit space", space_edit_path(space)  %></span></p>
-<% end %>
+  <div class="dashboard-grid-image">
+    image
+  </div>
 
+  <div class="dashboard-grid-info">
+    <h3 class="dashboard-info-title"><%= @user.name %></h3>
+    <p class="dashboard-info-text">phone number: <%= @user.phone_number %></p>
+    <p class="dashboard-info-text">email: <%= @user.email %></p>
+    <%= link_to "edit", "#", class: "dashboard-info-edit" %>
+  </div>
 
-<%= link_to "sign out", destroy_user_session_path, method: :delete  %>
+  <div class="dashboard-grid-stats first-stat">
+    <div>
+      <p>spaces</p>
+      <p><%= @user.spaces.count %></p>
+    </div>
+  </div>
 
+  <div class="dashboard-grid-stats second-stat">
+    <div>
+      <p>bookings</p>
+      <%= @user.bookings.count %>
+    </div>
+  </div>
 
-<%= link_to "Add new space", spaces_new_path  %>
+  <div class="dashboard-grid-stats third-stat">
+    <div>
+      <p>messages</p>
+      <p>34</p>
+    </div>
+  </div>
+
+  <div class="dashboard-grid-stats fourth-stat">
+    <div>
+      <p>ratings</p>
+      <p>3</p>
+    </div>
+  </div>
+
+  <div class="dashboard-grid-spaces">
+    <div class="dashboard-list-header">
+      <h3>Spaces</h3>
+      <div class="dashboard-list-item-spacer"></div>
+      <p class="dashboard-list-text"><%= link_to "add", spaces_new_path %></p>
+    </div>
+    <div class="dashboard-list">
+      <% @user.spaces.each do |space| %>
+        <div class="dashboard-list-item">
+          <p class="dashboard-list-text"><%= link_to space.name, space_path(space) %></p>
+          <div class="dashboard-list-item-spacer"></div>
+          <p class="dashboard-list-text"><%= link_to "edit", space_edit_path(space) %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="dashboard-grid-bookings">
+    <div class="dashboard-list-header">
+      <h3>Bookings</h3>
+    </div>
+    <div class="dashboard-list">
+      <% @user.bookings.each do |booking| %>
+        <div class="dashboard-list-item">
+          <p class="dashboard-list-text"><%= booking.message %></p>
+          <div class="dashboard-list-item-spacer"></div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
