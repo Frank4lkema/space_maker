@@ -5,7 +5,7 @@
   </div>
 
   <div class="dashboard-grid-info">
-    <h3 class="dashboard-info-title"><%= @user.name %></h3>
+    <h3 class="dashboard-info-title"><%= link_to @user.name, user_path(@user) %></h3>
     <p class="dashboard-info-text">phone number: <%= @user.phone_number %></p>
     <p class="dashboard-info-text">email: <%= @user.email %></p>
     <%= link_to "edit", "#", class: "dashboard-info-edit" %>
