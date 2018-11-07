@@ -1,8 +1,16 @@
+<!-- the following code should alsways be on top -->
+<% array_of_photos = [] %>
+<% @space.pictures.each do |picture| %>
+<% array_of_photos << (cl_image_tag picture.photo, height: 300, width: 400, crop: :fill)%>
+<% end %>
+
 <div class="container">
   <div class="row">
     <div class="space-information col-sm-offset-3 col-sm-4">
       <h1><%= @space.name %></h1>
-      <%= image_tag("franks_basement.jpg") %>
+      <div class = "first-photo">
+        <%= cl_image_tag @space.pictures[0].photo, height:600, width:800, crop: :fill %>
+      </div>
       <h3>Space information:</h3>
       <p>Name: <%= @space.name %></p>
       <p>Address: <%= @space.address %></p>
@@ -13,10 +21,6 @@
 </div>
 
 
-<% array_of_photos = [] %>
-<% @space.pictures.each do |picture| %>
-<% array_of_photos << (cl_image_tag picture.photo, height: 300, width: 400, crop: :fill)%>
-<% end %>
 
 <div class = "photo-container">
   <%= render "shared/photo", array_of_photos: array_of_photos %>
