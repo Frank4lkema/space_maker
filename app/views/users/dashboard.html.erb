@@ -1,8 +1,6 @@
-<h1>This works</h1>
+<h3><%= @user.name %></h3>
 
-<h1> <%= @user.name %></h1>
-
-<% @spaces.each do |space| %>
+<% @user.spaces.each do |space| %>
 <p><%= space.name %> <span> <%= link_to "edit space", space_edit_path(space)  %></span></p>
 <% end %>
 
