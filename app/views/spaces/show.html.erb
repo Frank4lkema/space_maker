@@ -11,5 +11,14 @@
     </div>
   </div>
 </div>
+
+<%= simple_form_for @booking do |b| %>
+  <%= b.hidden_field :space_id, :value => @space.id %>
+  <%= b.input :start_date %>
+  <%= b.input :end_date %>
+  <%= b.input :message %>
+  <%= b.button :submit %>
+<% end %>
+
 <%= link_to "Go back", spaces_path, class: "btn btn-primary"  %>
 <%= link_to "Dashboard", dashboard_path  %>
