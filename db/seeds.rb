@@ -6,10 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Picture.delete_all
+Booking.delete_all
 Space.delete_all
 User.delete_all
 
-users = User.create([
+
+users = User.create!([
   {
   email: "frank@gmail.com",
   password: "zonnetje",
@@ -24,7 +26,7 @@ users = User.create([
   }
 ])
 
-spaces = Space.create([
+spaces = Space.create!([
   {
     name: "Frank's Basement",
     address: "Oudwijkervelststraat, Utrecht",
@@ -68,30 +70,30 @@ spaces = Space.create([
     user_id: users[1].id
   }])
 
-pictures = Picture.create([
+pictures = Picture.create!([
   {
-    space_id: spaces[0],
-    photo: "https://res.cloudinary.com/ddpeg9u5v/image/upload/v1541594766/boutdpez7w7dmbptdz2x.jpg"
+    space: spaces[0],
+    remote_photo_url: "https://res.cloudinary.com/ddpeg9u5v/image/upload/v1541594766/boutdpez7w7dmbptdz2x.jpg"
   },
   {
-    space_id: spaces[1],
-    photo: "https://res.cloudinary.com/ddpeg9u5v/image/upload/v1541594766/boutdpez7w7dmbptdz2x.jpg"
+    space: spaces[1],
+    remote_photo_url: "https://res.cloudinary.com/ddpeg9u5v/image/upload/v1541594766/boutdpez7w7dmbptdz2x.jpg"
   },
   {
-    space_id: spaces[2],
-    photo: "https://res.cloudinary.com/ddpeg9u5v/image/upload/v1541594766/boutdpez7w7dmbptdz2x.jpg"
+    space: spaces[2],
+    remote_photo_url: "https://res.cloudinary.com/ddpeg9u5v/image/upload/v1541594766/boutdpez7w7dmbptdz2x.jpg"
   },
   {
-    space_id: spaces[3],
-    photo: "https://res.cloudinary.com/ddpeg9u5v/image/upload/v1541594766/boutdpez7w7dmbptdz2x.jpg"
+    space: spaces[3],
+    remote_photo_url: "https://res.cloudinary.com/ddpeg9u5v/image/upload/v1541594766/boutdpez7w7dmbptdz2x.jpg"
   },
   {
-    space_id: spaces[4],
-    photo: "https://res.cloudinary.com/ddpeg9u5v/image/upload/v1541594766/boutdpez7w7dmbptdz2x.jpg"
+    space: spaces[4],
+    remote_photo_url: "https://res.cloudinary.com/ddpeg9u5v/image/upload/v1541594766/boutdpez7w7dmbptdz2x.jpg"
   },
   {
-    space_id: spaces[5],
-    photo: "https://res.cloudinary.com/ddpeg9u5v/image/upload/v1541594766/boutdpez7w7dmbptdz2x.jpg"
+    space: spaces[5],
+    remote_photo_url: "https://res.cloudinary.com/ddpeg9u5v/image/upload/v1541594766/boutdpez7w7dmbptdz2x.jpg"
   }
 
 ])
