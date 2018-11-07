@@ -1,13 +1,14 @@
 class SpacesController < ApplicationController
-
+  skip_before_action :authenticate_user!, only: [:index]
   def index
     @spaces = policy_scope(Space)
+
   end
 
   def show
     @space = Space.find(params[:id])
     authorize @space
-    
+
     @booking = Booking.new
   end
 
