@@ -1,39 +1,33 @@
 <!-- the following code should alsways be on top -->
 <% array_of_photos = [] %>
 <% @space.pictures.each do |picture| %>
-<% array_of_photos << (cl_image_tag picture.photo, height: 300, width: 400, crop: :fill)%>
+  <% array_of_photos << (cl_image_tag picture.photo, height: 300, width: 400, crop: :fill)%>
 <% end %>
-
-<div class="container">
-  <div class="row">
-    <div class="space-information col-sm-offset-3 col-sm-4">
-      <h1><%= @space.name %></h1>
-      <div class = "first-photo">
+<div class="show-container">
+  <div class="row" style="margin-top: 5%;">
+    <div class="space-information">
+      <h3><%= @space.name.capitalize %></h3>
+      <!-- <div class = "first-photo">
         <%= cl_image_tag @space.pictures[0].photo, height:600, width:800, crop: :fill %>
+      </div> -->
+      <div class = "photo-container">
+        <%= render "shared/photo", array_of_photos: array_of_photos %>
       </div>
       <h3>Space information:</h3>
-      <p>Name: <%= @space.name %></p>
-      <p>Address: <%= @space.address %></p>
-      <p>Capacity: <%= @space.capacity %></p>
-      <p>Price: <%= @space.price %></p>
+      <p><strong>Name: </strong><%= @space.name %></p>
+      <p><strong>Address: </strong><%= @space.address %></p>
+      <p><strong>Capacity: </strong><%= @space.capacity %> m3</p>
+      <p><strong>Price: </strong><%= @space.price %></p>
+    </div>
+    <div class="space-information">
+      <%= simple_form_for @booking do |b| %>
+        <%= b.hidden_field :space_id, :value => @space.id %>
+        <%= b.input :start_date %>
+        <%= b.input :end_date %>
+        <%= b.input :message %>
+        <%= b.button :submit, class: "button button-green" %>
+      <% end %>
     </div>
   </div>
 </div>
-
-
-
-<div class = "photo-container">
-  <%= render "shared/photo", array_of_photos: array_of_photos %>
-</div>
-
-<%= simple_form_for @booking do |b| %>
-<%= b.hidden_field :space_id, :value => @space.id %>
-<%= b.input :start_date %>
-<%= b.input :end_date %>
-<%= b.input :message %>
-<%= b.button :submit %>
-<% end %>
-
-<%= link_to "Go back", spaces_path, class: "btn btn-primary"  %>
-<%= link_to "Dashboard", dashboard_path  %>
-
+<%= link_to "Go back", spaces_path, class: "button button-primary"  %>
