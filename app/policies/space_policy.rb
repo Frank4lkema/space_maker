@@ -17,7 +17,7 @@ class SpacePolicy < ApplicationPolicy
     true
   end
 
-  def create
+  def create?
     true
   end
 
@@ -25,7 +25,7 @@ class SpacePolicy < ApplicationPolicy
     true
   end
 
-  def update
+  def update?
     true
   end
 end
