@@ -1,0 +1,22 @@
+.show-container {
+  margin-bottom: 10%;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 100px;
+  margin: 0 5%;
+  h3:first-child{
+    margin: 0 0 3px;
+  }
+}
+
+.space-information{
+  width: 100%;
+  p{
+    margin: 0;
+  }
+  h3{
+    margin-top: 5%;
+  }
+}
