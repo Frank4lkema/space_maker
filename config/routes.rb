@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 # custom routes
   get "spaces", to: "spaces#index"
   patch "space/:id", to:'spaces#update'
-  get "user/:id", to: "users#show"
+  get "user/:id", to: "users#show", as: :user
   get "dashboard", to: "users#dashboard", as: :dashboard
   get "spaces/new", to: "spaces#new"
   post "spaces", to: "spaces#create"
