@@ -2,11 +2,7 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
-    if @booking.save
-      redirect_to dashboard_path
-    else
-      render space_path(params[:id])
-    end
+    @booking.save ? (redirect_to dashboard_path):(render space_path(params[:id]))
   end
 
   private
