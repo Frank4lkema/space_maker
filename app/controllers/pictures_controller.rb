@@ -15,6 +15,13 @@ class PicturesController < ApplicationController
   end
 
 
+  def destroy
+    @picture = Picture.find(params[:id])
+    authorize @picture
+    @picture.destroy
+    redirect_to  space_edit_path(@picture.space)
+  end
+
   private
 
   def picture_params

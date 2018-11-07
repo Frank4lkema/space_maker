@@ -9,11 +9,12 @@ Rails.application.routes.draw do
   get "user/:id", to: "users#show", as: :user
   get "dashboard", to: "users#dashboard", as: :dashboard
   get "spaces/new", to: "spaces#new"
+  delete "picture/:id", to: 'pictures#destroy',as: :picture
   post "spaces", to: "spaces#create"
   get "space/:id/edit", to: 'spaces#edit', as: :space_edit
   delete "space/:id", to: 'spaces#destroy'
   get "picture/:id", to: "pictures#edit", as: :edit_picture
-  patch "picture/:id", to: "pictures#update", as: :picture
+  # patch "picture/:id", to: "pictures#update", as: :picture
   get "space/:id", to: "spaces#show", as: :space
   post "bookings", to: "bookings#create"
   # resources :users do
