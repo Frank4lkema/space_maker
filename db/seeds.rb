@@ -67,3 +67,32 @@ spaces = Space.create([
     price: 200.00,
     user_id: users[1].id
   }])
+
+pictures = Picture.create([
+  {
+    space_id: spaces[0],
+    photo: "https://res.cloudinary.com/ddpeg9u5v/image/upload/v1541594766/boutdpez7w7dmbptdz2x.jpg"
+  },
+  {
+    space_id: spaces[1],
+    photo: "https://res.cloudinary.com/ddpeg9u5v/image/upload/v1541594766/boutdpez7w7dmbptdz2x.jpg"
+  },
+  {
+    space_id: spaces[2],
+    photo: "https://res.cloudinary.com/ddpeg9u5v/image/upload/v1541594766/boutdpez7w7dmbptdz2x.jpg"
+  },
+  {
+    space_id: spaces[3],
+    photo: "https://res.cloudinary.com/ddpeg9u5v/image/upload/v1541594766/boutdpez7w7dmbptdz2x.jpg"
+  },
+  {
+    space_id: spaces[4],
+    photo: "https://res.cloudinary.com/ddpeg9u5v/image/upload/v1541594766/boutdpez7w7dmbptdz2x.jpg"
+  },
+  {
+    space_id: spaces[5],
+    photo: "https://res.cloudinary.com/ddpeg9u5v/image/upload/v1541594766/boutdpez7w7dmbptdz2x.jpg"
+  }
+
+])
+
