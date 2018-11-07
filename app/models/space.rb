@@ -14,6 +14,9 @@ class Space < ApplicationRecord
   # https://api.rubyonrails.org/classes/ActiveRecord/NestedAttributes/ClassMethods.html
   accepts_nested_attributes_for :pictures
 
+
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end
 
 
