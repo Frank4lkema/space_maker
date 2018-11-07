@@ -23,6 +23,9 @@ gem 'carrierwave', '~> 1.2'
 # cloudinary gem
 gem 'cloudinary'
 
+# geo code gem
+gem "geocoder"
+
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
 gem 'font-awesome-sass', '~> 5.0.9'
