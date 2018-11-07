@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
+    authorize @booking
     @booking.user = current_user
     @booking.save ? (redirect_to dashboard_path):(render space_path(params[:id]))
   end
