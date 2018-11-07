@@ -4,7 +4,9 @@
     <div class="list-card">
       <div class="card-image">Image</div>
       <div class="list-card-info">
-        <h3><%= space.name %></h3>
+        <%= link_to space_path(space) do %>
+          <h3><%= space.name %></h3>
+        <% end %>
         <p><%= space.user.name %></p>
         <p><%= space.price %></p>
         <p><%= space.address %></p>
