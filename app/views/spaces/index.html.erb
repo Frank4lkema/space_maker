@@ -1,19 +1,24 @@
 <dev class="index-container">
   <div class="list-cards">
     <% @spaces.each do |space| %>
-      <div class="list-card">
-        <div class="card-image">Image</div>
-        <div class="list-card-info">
-          <h3><%= space.name %></h3>
-          <p><%= space.user.name %></p>
-          <p><%= space.price %></p>
-          <p><%= space.address %></p>
-        </div>
+    <div class="list-card">
+      <div class="card-image">Image</div>
+      <div class="list-card-info">
+        <h3><%= space.name %></h3>
+        <p><%= space.user.name %></p>
+        <p><%= space.price %></p>
+        <p><%= space.address %></p>
       </div>
+    </div>
     <% end %>
   </div>
   <div class="map-side">
-    <p>MAP</p>
+    <div
+    id="map"
+    style="width: 100%;
+    height: 600px;"
+    data-markers="<%= @markers.to_json %>"
+    ></div>
   </div>
 </dev>
 

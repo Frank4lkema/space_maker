@@ -4,7 +4,7 @@ class User < ApplicationRecord
   has_many :bookings
 
   # validations
-  validates :name, presence: true
+  # validates :name, presence: true
   # validates :phone_number, presence: true
   # validates :avatar, presence: true
 
