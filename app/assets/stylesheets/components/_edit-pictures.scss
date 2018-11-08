@@ -9,12 +9,13 @@
 .border-picture{
   position: relative;
   padding:10px 10px 10px 10px;
+  width: 211px;
 }
 
 .delete-picture-link{
   position:absolute;
   top: 13px;
-  right: 90px;
+  right: 71px;
   background-color: white;
   border-radius: 50%;
   width: 20px;
@@ -30,4 +31,6 @@
   width: 400px;
 }
 
-
+.box-around-pictures{
+  width: 635px;
+}
