@@ -68,7 +68,7 @@
     <div class="dashboard-list">
       <% @user.bookings.each do |booking| %>
         <div class="dashboard-list-item">
-          <p class="dashboard-list-text"><%= booking.rent %></p>
+          <p class="dashboard-list-text"><%= booking.rent %> -- <%= link_to "delete", booking_path(booking), method: :delete%></p>
           <div class="dashboard-list-item-spacer"></div>
         </div>
       <% end %>

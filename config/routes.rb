@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get "dashboard", to: "users#dashboard", as: :dashboard
   get "spaces/new", to: "spaces#new"
   delete "picture/:id", to: 'pictures#destroy',as: :picture
+  delete "booking/:id", to: 'bookings#destroy',as: :booking
   post "spaces", to: "spaces#create"
   get "space/:id/edit", to: 'spaces#edit', as: :space_edit
   get "user/:id/edit", to: 'users#edit', as: :user_edit
