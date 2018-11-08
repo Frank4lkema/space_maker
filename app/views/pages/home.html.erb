@@ -8,77 +8,58 @@
 
 <div class="card_container">
   <h3>Nearby spaces</h3>
-  <div class="row_card">
-    <% Space.order("RANDOM()").first(3).each do |space| %>
-    <%
-    picture = space.pictures.first
-    if picture
-      image_path = cl_image_path(picture.photo)
-    else
-      image_path = " "
-    end
-    %>
+<%= render "shared/card" %>
+</div>
 
-          <div class="col-xs-12 col-sm-4">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url( <%= image_path %>);">
-            <h2><%= space.name %></h2>
-            <p> <%= space.address %> </p>
-          <%= link_to "",space_path(space), class: "card-link" %>
-          </div>
-        </div>
-    <% end %>
+<div class="multi-column-container">
+  <div class="two-column-content">
+    <div>
+      <h3>Why use space maker?</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel lobortis velit. Integer dictum dui ut nunc tristique venenatis. Vivamus blandit, nisl a lacinia vehicula, urna risus interdum felis, ac aliquet purus ex at dui.</p>
+      <%= link_to "Register", new_user_registration_path, class: "button button-primary"  %>
+    </div>
+  </div>
+  <div class="two-column-content">
+    <p>image</p>
   </div>
 </div>
 
-  <div class="multi-column-container">
-    <div class="two-column-content">
-      <div>
-        <h3>Why use space maker?</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel lobortis velit. Integer dictum dui ut nunc tristique venenatis. Vivamus blandit, nisl a lacinia vehicula, urna risus interdum felis, ac aliquet purus ex at dui.</p>
-        <%= link_to "Register", new_user_registration_path, class: "button button-primary"  %>
-      </div>
-    </div>
-    <div class="two-column-content">
-      <p>image</p>
+<div class="multi-column-container">
+  <div class="two-column-content">
+    <p>image</p>
+  </div>
+  <div class="two-column-content">
+    <div>
+      <h3>Still not convinced?</h3>
+      <h4>Here is why we're awesome</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel lobortis velit.</p>
+      <h4>Here is why our competitor is not.</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel lobortis velit. Integer dictum dui ut nunc tristique venenatis.</p>
+      <%= link_to "Register", new_user_registration_path, class: "button button-primary"  %>
     </div>
   </div>
+</div>
 
-  <div class="multi-column-container">
-    <div class="two-column-content">
-      <p>image</p>
-    </div>
-    <div class="two-column-content">
-      <div>
-        <h3>Still not convinced?</h3>
-        <h4>Here is why we're awesome</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel lobortis velit.</p>
-        <h4>Here is why our competitor is not.</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel lobortis velit. Integer dictum dui ut nunc tristique venenatis.</p>
-        <%= link_to "Register", new_user_registration_path, class: "button button-primary"  %>
-      </div>
+<div class="multi-column-container">
+  <div class="two-column-content">
+    <div>
+      <h3>You look convinced..</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel lobortis velit. Integer dictum dui ut nunc tristique venenatis. Vivamus blandit, nisl a lacinia vehicula, urna risus interdum felis, ac aliquet purus ex at dui. Vestibulum a orci lobortis, lobortis magna at, lacin
+      </p>
+      <%= link_to "Register", new_user_registration_path, class: "button button-primary"  %>
     </div>
   </div>
+  <div class="two-column-content">
+    <p>image</p>
+  </div>
+</div>
 
-  <div class="multi-column-container">
-    <div class="two-column-content">
-      <div>
-        <h3>You look convinced..</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel lobortis velit. Integer dictum dui ut nunc tristique venenatis. Vivamus blandit, nisl a lacinia vehicula, urna risus interdum felis, ac aliquet purus ex at dui. Vestibulum a orci lobortis, lobortis magna at, lacin
-        </p>
-        <%= link_to "Register", new_user_registration_path, class: "button button-primary"  %>
-      </div>
-    </div>
-    <div class="two-column-content">
-      <p>image</p>
+<div class="main-container">
+  <div class="one-column-content">
+    <div class="centered-text">
+      <h3>Just sign up!</h3>
+      <p>lil bitch...</p>
+      <%= link_to "Register", new_user_registration_path, class: "button button-primary"  %>
     </div>
   </div>
-
-  <div class="main-container">
-    <div class="one-column-content">
-      <div class="centered-text">
-        <h3>Just sign up!</h3>
-        <p>lil bitch...</p>
-        <%= link_to "Register", new_user_registration_path, class: "button button-primary"  %>
-      </div>
-    </div>
 </div>

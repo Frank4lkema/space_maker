@@ -1,0 +1,51 @@
+.row_card {
+  justify-content: center;
+  display: flex;
+  align-content: space-between;
+}
+
+.card {
+  background-size: cover;
+  margin-left: 10px;
+  margin-right: 10px;
+  min-width: 20%;
+  position:relative;
+  color: white;
+  padding: 5px;
+  min-height: 175px;
+}
+
+.card a {
+  color: white;
+}
+
+.card:hover, .card:focus {
+  // transform: scale(1.05);
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+.card_container {
+  border: 1px lightgrey;
+  border-style: solid;
+  padding: 20px;
+}
+
+.card_container h1 {
+  margin-left: 10px;
+}
+
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  background: black;
+  opacity: 0;
+}
+
+.card-link:hover {
+  opacity: 0.1;
+}
