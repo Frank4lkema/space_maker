@@ -68,7 +68,7 @@
     <div class="dashboard-list">
       <% @user.bookings.each do |booking| %>
         <div class="dashboard-list-item">
-          <p class="dashboard-list-text"><%= booking.message %></p>
+          <p class="dashboard-list-text"><%= booking.rent %></p>
           <div class="dashboard-list-item-spacer"></div>
         </div>
       <% end %>

@@ -33,7 +33,7 @@
         <%= b.hidden_field :space_id, :value => @space.id %>
         <%= b.input :start_date %>
         <%= b.input :end_date %>
-        <%= b.input :message %>
+        <%= b.input :rent, collection: 0..@space.capacity %>
         <%= b.button :submit, class: "button button-green" %>
       <% end %>
     </div>

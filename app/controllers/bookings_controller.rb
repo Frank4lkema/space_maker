@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
+    @booking.space.capacity -= @booking.rent
     authorize @booking
     @booking.user = current_user
     @booking.save ? (redirect_to dashboard_path):(render space_path(params[:id]))
@@ -9,6 +10,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :message, :space_id)
+    params.require(:booking).permit(:start_date, :end_date, :rent, :space_id)
   end
 end
