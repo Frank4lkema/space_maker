@@ -17,9 +17,7 @@
   <div class="row">
     <div class="space-information">
       <h3><%= @space.name.capitalize %></h3>
-      <!-- <div class = "first-photo">
-        <%= cl_image_tag @space.pictures[0].photo, height:600, width:800, crop: :fill %>
-      </div> -->
+
       <div class = "photo-container">
         <%= render "shared/photo", array_of_photos: array_of_photos %>
       </div>
