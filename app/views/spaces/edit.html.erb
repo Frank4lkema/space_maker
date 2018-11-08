@@ -6,13 +6,16 @@
 <%= f.input :price %>
 <%= f.input :capacity %>
 <%= f.button :submit %>
+<%= f.fields_for :pictures_attributes do |p| %>
+  <%= p.label :photo %><br>
+  <%= p.file_field :photo, :multiple => true, name: "pictures[photo][]"%>
+   <% end %>
 <% end %>
 
 
 <% @pictures.each do |p| %>
 
   <%= cl_image_tag p.photo, height: 100, width: 133, crop: :fill %>
-  <%= link_to "Delete foto", edit_picture_path(p)%>
+  <%= link_to "delete", picture_path(p), method: :delete %>
 <% end %>
-
 
