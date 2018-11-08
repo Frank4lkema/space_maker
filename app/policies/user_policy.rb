@@ -8,6 +8,22 @@ class UserPolicy < ApplicationPolicy
       true
     end
 
+    def create?
+      true
+    end
+
+    def new?
+      create?
+    end
+
+    def update?
+      true
+    end
+
+    def edit?
+      update?
+    end
+
     def dashboard?
       record == user
     end
