@@ -1,24 +1,30 @@
-<h1>This works</h1>
+  <div class = "main-container">
+    <div class=" max-with">
+      <h1><%= @space.name %></h1>
 
-<%= simple_form_for(@space) do |f| %>
-<%= f.input :name %>
-<%= f.input :address %>
-<%= f.input :price %>
-<%= f.input :capacity %>
-<%= f.fields_for :pictures_attributes do |p| %>
-  <%= p.label :photo %><br>
-  <%= p.file_field :photo, :multiple => true, name: "pictures[photo][]"%>
-<% end %>
-<%= f.button :submit %>
-<% end %>
-
-
-<div class= "inline-pictures">
-  <% @pictures.each do |p| %>
-    <div class = "border-picture">
-      <%= cl_image_tag p.photo, height: 100, width: 133, crop: :fill %>
-      <%= link_to "delete", picture_path(p), method: :delete %>
+      <%= simple_form_for(@space) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :address %>
+      <%= f.input :price %>
+      <%= f.input :capacity %>
+      <%= f.fields_for :pictures_attributes do |p| %>
+        <%= p.label :photo %><br>
+        <%= p.file_field :photo, :multiple => true, name: "pictures[photo][]"%>
+      <% end %>
+      <%= f.button :submit %>
+    <% end %>
+   </div>
+  <div>
+    <div class= "inline-pictures">
+      <% @pictures.each do |p| %>
+        <div class = "border-picture col-xs-3">
+          <%= cl_image_tag p.photo, height: 100, width: 133, crop: :fill %>
+          <div class = "delete-picture-link">
+            <%= link_to "", picture_path(p), method: :delete, class: "fas fa-times" %>
+          </div>
+        </div>
+      <% end %>
     </div>
-  <% end %>
+  </div>
 </div>
 
