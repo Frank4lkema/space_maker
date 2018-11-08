@@ -12,6 +12,7 @@
 <% array_of_photos = [] %>
 <% @space.pictures.each do |picture| %>
   <% array_of_photos << (cl_image_tag picture.photo, height: 300, width: 400, crop: :fill)%>
+
 <% end %>
 <div class="show-container">
   <div class="row">

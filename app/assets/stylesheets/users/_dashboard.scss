@@ -9,11 +9,17 @@
   grid-gap: 20px;
 }
 
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
 .dashboard-grid-image {
   grid-row: 2 / span 1;
   grid-column: 1 / span 1;
   color: #fff;
-  background-color: #159CBC;
+  // background-color: #159CBC;
 }
 
 .dashboard-grid-info {

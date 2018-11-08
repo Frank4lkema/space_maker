@@ -4,5 +4,7 @@
 <%= f.input :name %>
 <%= f.input :email %>
 <%= f.input :phone_number %>
-<%= f.button :submit, class: "button button-green" %>
+<%= f.file_field :avatar, :multiple => false %>
+<%= f.input :avatar_cache, as: :hidden %>
+<%= f.button :submit %>
 <% end %>
