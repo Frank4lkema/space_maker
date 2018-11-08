@@ -50,14 +50,16 @@ p {
   padding: 8px 20px 12px;
   border-radius: 2px;
   letter-spacing: 0.2px;
-  color: #fff;
-  transition: padding 150ms ease;
+  color: #fff !important;
+  transition: all 150ms ease;
+  margin: 0px 10px;
 }
 
 .button:hover {
   text-decoration: none;
-  color: #fff;
+  color: #fff !important;
   padding: 8px 30px 12px;
+  margin: 0px;
 }
 
 .button-primary {
@@ -145,9 +147,6 @@ p {
 }
 
 // MAIN FORM STYLES
-// div {
-//   border: 1px dotted red;
-// }
 
 label {
   font-size: 26px;
@@ -171,6 +170,7 @@ input {
   border-radius: 0px !important;
   border: none !important;
   box-shadow: none !important;
+  color: #fff;
 }
 
 textarea {
@@ -189,3 +189,29 @@ textarea {
 .mx-1 {
   width: 33%;
 }
+
+.form-holder {
+  background-color: #159CBC;
+  min-width: 35vw;
+  padding: 40px 25px;
+  border-radius: 25px;
+}
+
+.form-h1-title {
+  margin-bottom: 30px;
+}
+
+.form-text-white {
+  h1 {
+    color: #fff;
+  }
+  label {
+    color: #fff;
+  }
+  input {
+    color: #444;
+  }
+}
+
+
+
