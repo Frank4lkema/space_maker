@@ -13,19 +13,20 @@ class SpacePolicy < ApplicationPolicy
     true
   end
 
-  def new?
-    true
-  end
-
   def create?
     true
   end
 
-  def edit?
-    true
+  def new?
+    create?
   end
 
   def update?
     true
   end
+
+  def edit?
+    update?
+  end
+
 end
