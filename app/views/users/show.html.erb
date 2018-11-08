@@ -12,27 +12,36 @@
       </div>
     </div>
   </div>
-    <div class="row_about">
-      <div>
-        <h3>About</h3>
-      </div>
-      <div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, beatae? Iure distinctio ullam ipsum ad laudantium totam, et reprehenderit aperiam unde veniam architecto, dolore incidunt consequatur cupiditate sint obcaecati error.</p>
-      </div>
+  <div class="row_about">
+    <div>
+      <h3>About</h3>
     </div>
+    <div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, beatae? Iure distinctio ullam ipsum ad laudantium totam, et reprehenderit aperiam unde veniam architecto, dolore incidunt consequatur cupiditate sint obcaecati error.</p>
+    </div>
+  </div>
   <div class="card_container">
     <h3>My Spaces</h3>
     <div class="row_card">
       <% @user.spaces.each do |space| %>
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url( <%= image_path 'elad_shack.jpg' %>);">
-        <%= link_to space_path(space) do %>
-        <div class="col-xs-12 col-sm-4">
+      <%
+      picture = space.pictures.first
+      if picture
+        image_path = cl_image_path(picture.photo)
+      else
+        image_path = " "
+      end
+      %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url( <%= image_path %>);">
+          <%= link_to space_path(space) do %>
           <h3><%= space.name %></h3>
           <p> <%= space.address %> </p>
+          <%= link_to "",space_path(space), class: "card-link" %>
         </div>
         <% end %>
       </div>
-    <% end %>
+      <% end %>
     </div>
   </div>
 </div>
