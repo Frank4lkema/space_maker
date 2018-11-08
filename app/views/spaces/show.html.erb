@@ -26,8 +26,8 @@
       <h3>Space information:</h3>
       <p><strong>Name: </strong><%= @space.name %></p>
       <p><strong>Address: </strong><%= @space.address %></p>
-      <p><strong>Capacity: </strong><%= @space.capacity %> m3</p>
-      <p><strong>Price: </strong><%= @space.price %></p>
+      <p><strong>Capacity: </strong><%= @space.capacity %> m³</p>
+      <p><strong>Price: </strong>€ <%= @space.price %> (per month)</p>
     </div>
     <div class="space-information">
       <%= simple_form_for @booking do |b| %>
