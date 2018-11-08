@@ -1,3 +1,35 @@
+.main-container{
+  max-width: 80% !important;
+}
+
+.list-container{
+  margin-top: 28%;
+}
+
+.list-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex: 1 0 500px;
+}
+
+.list-card {
+  flex: 1 0 auto;
+  max-width: 500px;
+  background-color: #fff;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.07), 0 1px 0 0 rgba(0, 0, 0, 0.03);
+}
+
+.card-image {
+  height: 150px;
+  float: left;
+}
+
+.list-card-info {
+  overflow: hidden;
+  margin: 2% 0 0 35%;
+}
+
 .list-card-info p {
   margin: 0px;
 }
@@ -6,34 +38,3 @@
   margin: 0px;
 }
 
-.index-container {
-  max-width: 1024px;
-  margin: 0px auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.list-cards {
-  display: flex;
-  flex-wrap: wrap;
-  flex: 1 0 500px;
-}
-
-.list-card {
-  flex: 1 0 auto;
-}
-
-.card-image {
-  width: 200px;
-  height: 100%;
-  float: left;
-}
-
-.list-card-info {
-  overflow: hidden;
-}
-
-.map-side {
-  width: 40%;
-}
