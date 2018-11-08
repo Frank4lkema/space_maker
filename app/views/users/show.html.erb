@@ -1,7 +1,11 @@
 <div class="container">
   <div class="row" id="top_row">
     <div class="avatar">
-      <%= image_tag("profile_avatar.jpg") %>
+      <% if @user.avatar.present? %>
+      <%= (cl_image_tag @user.avatar, width: 200, height: 200, crop: :thumb, radius: :max) %>
+      <% else %>
+      <%= image_tag "dumb_avatar.png", class: "avatar"%>
+      <% end %>
     </div>
     <div class="username">
       <div>
@@ -17,7 +21,7 @@
       <h3>About</h3>
     </div>
     <div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, beatae? Iure distinctio ullam ipsum ad laudantium totam, et reprehenderit aperiam unde veniam architecto, dolore incidunt consequatur cupiditate sint obcaecati error.</p>
+      <p><%= @user.about %></p>
     </div>
   </div>
   <div class="card_container">

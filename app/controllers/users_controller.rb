@@ -14,7 +14,11 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     authorize @user
-    render :dashboard if @user.update(user_params)
+    if @user.update(user_params)
+      redirect_to dashboard_path
+    else
+      render :edit
+    end
   end
 
   def dashboard
@@ -30,6 +34,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :phone_number, :avatar)
+    params.require(:user).permit(:name, :email, :phone_number, :about, :avatar)
   end
 end

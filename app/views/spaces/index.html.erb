@@ -1,39 +1,25 @@
-<dev class="index-container">
-  <div class="list-cards">
+<div class="map-side">
+  <div
+  id="map"
+  data-markers="<%= @markers.to_json %>"
+  ></div>
+</div>
+<div class="main-container">
+  <div class="list-cards list-container">
     <% @spaces.each do |space| %>
     <div class="list-card">
-      <div class="card-image">Image</div>
+      <!-- <div class="card-image">Image</div> -->
+      <%= image_tag("profile_avatar.jpg", class: "card-image")%>
       <div class="list-card-info">
         <%= link_to space_path(space) do %>
           <h3><%= space.name %></h3>
         <% end %>
-        <p><%= space.user.name %></p>
-        <p><%= space.price %></p>
-        <p><%= space.address %></p>
+        <p><strong>Name: </strong><%= space.user.name %></p>
+        <p><strong>Address: </strong><%= space.address %></p>
+        <p><strong>Capacity: </strong><%= space.capacity %>m³</p>
+        <p><strong>Price: </strong>€<%= space.price %> (per month)</p>
       </div>
     </div>
     <% end %>
   </div>
-  <div class="map-side">
-    <div
-    id="map"
-    style="width: 100%;
-    height: 600px;"
-    data-markers="<%= @markers.to_json %>"
-    ></div>
-  </div>
-</dev>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
