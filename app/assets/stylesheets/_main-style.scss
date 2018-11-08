@@ -1,6 +1,7 @@
 // NECESSARY FOR DEPENDANTS
-.top-spacer {
-  padding-top: 70px;
+.content-wrapper {
+  padding-top: 10%;
+  margin-bottom: 10%;
 }
 
 // MAIN TEXT STYLES
@@ -141,4 +142,50 @@ p {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+// MAIN FORM STYLES
+// div {
+//   border: 1px dotted red;
+// }
+
+label {
+  font-size: 26px;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 700;
+}
+
+select {
+  border-radius: 0px !important;
+  border: none !important;
+  box-shadow: none !important;
+  -webkit-appearance: none;
+  letter-spacing: 0.2px;
+  line-height: 28px;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+input {
+  border-radius: 0px !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+textarea {
+  border-radius: 0px !important;
+  border: none !important;
+  box-shadow: none !important;
+  -webkit-appearance: none;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.mx-1 {
+  width: 33%;
 }
