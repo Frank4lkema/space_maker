@@ -1,11 +1,11 @@
 .dashboard-container {
   background-color: #fff;
   max-width: 1024px;
-  margin: 50px auto;
-  padding: 0px 20px 40px;
+  margin: 20px auto;
+  padding: 20px 20px 40px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 80px 200px 1fr;
+  grid-template-rows: 200px 1fr;
   grid-gap: 20px;
 }
 
@@ -16,27 +16,30 @@
 }
 
 .dashboard-grid-image {
-  grid-row: 2 / span 1;
+  grid-row: 1 / span 1;
   grid-column: 1 / span 1;
   color: #fff;
   // background-color: #159CBC;
 }
 
 .dashboard-grid-info {
-  grid-row: 2 / span 1;
+  grid-row: 1 / span 1;
   grid-column: 2 / span 3;
   background-color: #fff;
-  padding: 20px;
+  padding: 30px;
   position: relative;
+  h3:last-child {
+    color: #aaa;
+  }
 }
 
 .dashboard-grid-spaces {
-  grid-row: 3 / span 1;
+  grid-row: 2 / span 1;
   grid-column: 1 / span 2;
 }
 
 .dashboard-grid-bookings {
-  grid-row: 3 / span 1;
+  grid-row: 2 / span 1;
   grid-column: 3 / span 2;
 }
 
@@ -51,40 +54,8 @@
 
 .dashboard-info-edit {
   position: absolute;
-  top: 5px;
-  right: 15px;
-}
-
-.dashboard-grid-stats {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  div {
-    text-align: center;
-    p {
-      margin: 0px;
-    }
-  }
-}
-
-.first-stat {
-  grid-row: 1 / span 1;
-  grid-column: 1 / span 1;
-}
-
-.second-stat {
-  grid-row: 1 / span 1;
-  grid-column: 2 / span 1;
-}
-
-.third-stat {
-  grid-row: 1 / span 1;
-  grid-column: 3 / span 1;
-}
-
-.fourth-stat {
-  grid-row: 1 / span 1;
-  grid-column: 4 / span 1;
+  right: 0px;
+  top: 0px;
 }
 
 .dashboard-list-header {
@@ -100,7 +71,6 @@
 
 .dashboard-list {
   background-color: #fff;
-  min-height: 200px;
   border-bottom: 2px solid #159CBC;
 }
 
@@ -111,17 +81,47 @@
   border-bottom: 1px solid #ddd;
 }
 
+.dashboard-list-item:last-child {
+  border-bottom: 0px solid #159CBC;
+}
+
 .dashboard-list-text {
   margin: 0px;
-  a {
-    color: #000;
-  }
+  letter-spacing: 0.2px;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.dashboard-link {
+  color: #666 !important;
+}
+
+.dashboard-link:hover {
+  text-decoration: none;
+  color: #159CBC !important;
 }
 
 .dashboard-list-item-spacer {
   flex: 1 0 auto;
 }
 
-.far:hover, .fas:hover{
-  text-decoration: none;
+.dashboard-icon {
+  color: #ddd;
+  font-size: 14px;
 }
+
+.add {
+  font-size: 20px;
+}
+
+.dashboard-icon:hover {
+  text-decoration: none;
+  color: #159CBC;
+}
+
+.add-space-margin {
+  margin-top: 5px;
+}
+
+
