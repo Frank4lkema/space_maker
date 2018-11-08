@@ -15,18 +15,16 @@
     <% end %>
    </div>
 
-
-
-
-
   <div class="box-around-pictures">
     <div class= "inline-pictures">
       <% @pictures.each do |p| %>
         <div class = "border-picture col-xs-3">
           <%= cl_image_tag p.photo, height: 100, width: 133, crop: :fill %>
+          <% if @pictures.count > 1 %>
           <div class = "delete-picture-link">
             <%= link_to "", picture_path(p), method: :delete, class: "fas fa-times" %>
           </div>
+          <% end %>
         </div>
       <% end %>
     </div>
