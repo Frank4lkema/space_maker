@@ -43,14 +43,14 @@
     <div class="dashboard-list-header">
       <h3>Spaces</h3>
       <div class="dashboard-list-item-spacer"></div>
-      <p class="dashboard-list-text"><%= link_to "add", spaces_new_path %></p>
+      <p class="dashboard-list-text"><%= link_to "", spaces_new_path, class: "fas fa-plus" %></p>
     </div>
     <div class="dashboard-list">
       <% @user.spaces.each do |space| %>
         <div class="dashboard-list-item">
           <p class="dashboard-list-text"><%= link_to space.name, space_path(space) %></p>
           <div class="dashboard-list-item-spacer"></div>
-          <p class="dashboard-list-text"><%= link_to "edit", space_edit_path(space) %></p>
+          <p class="dashboard-list-text"><%= link_to "", space_edit_path(space), class: "far fa-edit" %></p>
         </div>
       <% end %>
     </div>
