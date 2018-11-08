@@ -27,6 +27,9 @@
       <p><strong>Address: </strong><%= @space.address %></p>
       <p><strong>Capacity: </strong><%= @space.capacity %> m³</p>
       <p><strong>Price: </strong>€ <%= @space.price %> (per month)</p>
+      <div class="link-wrapper-in">
+        <%= link_to "Owner Profile", user_path(@space.user), class: "button button-green" %>
+      </div>
     </div>
     <div class="space-information">
       <%= simple_form_for @booking do |b| %>
@@ -39,3 +42,5 @@
     </div>
   </div>
 </div>
+
+<!-- link_to @user.name, user_path(@user) -->
