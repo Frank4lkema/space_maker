@@ -7,6 +7,7 @@
       <%= f.input :address %>
       <%= f.input :price %>
       <%= f.input :capacity %>
+      <%= f.input :description %>
       <%= f.fields_for :pictures_attributes do |p| %>
         <%= p.label :photo %><br>
         <%= p.file_field :photo, :multiple => true, name: "pictures[photo][]"%>

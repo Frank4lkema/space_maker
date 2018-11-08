@@ -40,6 +40,8 @@
       <% @user.bookings.each do |booking| %>
         <div class="dashboard-list-item">
           <%= link_to booking.space.name, spaces_path(booking.space), class: "dashboard-list-text dashboard-link" %>
+          <p class="dashboard-list-text"><%= booking.rent %> -- <%= link_to "delete", booking_path(booking), method: :delete%></p>
+
           <div class="dashboard-list-item-spacer"></div>
           <%= link_to booking.space.user.name, user_path(booking.space.user), class: "dashboard-list-text" %>
         </div>
