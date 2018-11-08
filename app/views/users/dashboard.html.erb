@@ -2,7 +2,7 @@
 
   <div class="dashboard-grid-image">
     <% if @user.avatar.present? %>
-    <%= (cl_image_tag @user.avatar, width: 200, height: 200, crop: :thumb, radius: :max) %>
+    <%= (cl_image_tag @user.avatar, width: 200, height: 200, crop: :thumb, class: "dashboard-avatar") %>
     <% else %>
     <%= image_tag "dumb_avatar.png", class: "avatar"%>
     <% end %>
