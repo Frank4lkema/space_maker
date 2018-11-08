@@ -8,13 +8,16 @@
   <div class="list-cards list-container">
     <% @spaces.each do |space| %>
     <div class="list-card">
-      <!-- <div class="card-image">Image</div> -->
-      <%= image_tag("profile_avatar.jpg", class: "card-image")%>
+      <% if !space.pictures.first.present? %>
+        <%= image_tag "dumb_avatar.png", class: "card-image"%>
+      <% else %>
+        <%= (cl_image_tag(space.pictures.first.photo, class: "card-image" ))%>
+      <% end %>
       <div class="list-card-info">
         <%= link_to space_path(space) do %>
           <h3><%= space.name %></h3>
         <% end %>
-        <p><strong>Name: </strong><%= space.user.name %></p>
+        <p><strong>Owner: </strong><%= space.user.name %></p>
         <p><strong>Address: </strong><%= space.address %></p>
         <p><strong>Capacity: </strong><%= space.capacity %>m³</p>
         <p><strong>Price: </strong>€<%= space.price %> (per month)</p>
