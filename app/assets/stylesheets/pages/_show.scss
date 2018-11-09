@@ -1,18 +1,18 @@
-.row {
+.top-row {
   display: flex;
-  margin-bottom: 40px;
-  width: 95%;
-}
-#top_row {
+  margin-bottom: 20px;
+  width: 100%;
   margin-top: 30px;
+  justify-content: space-between;
 }
-.avatar img {
+
+.avatar-profile img {
   border-radius: 50%;
   width: 200px;
   height: 200px;
 }
 
-.avatar {
+.avatar-profile {
   display: flex;
   padding-bottom: 20px;
 }
@@ -31,9 +31,9 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
-  border: 1px lightgrey;
-  border-style: solid;
   padding: 20px;
   margin-top: 40px;
   min-width: 50%;
+  background-color: white;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.07), 0 1px 0 0 rgba(0, 0, 0, 0.03);
 }
