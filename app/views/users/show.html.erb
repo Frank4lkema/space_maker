@@ -1,6 +1,6 @@
 <div class="container">
-  <div class="row" id="top_row">
-    <div class="avatar">
+  <div class="top-row id="top_row">
+    <div class="avatar-profile">
       <% if @user.avatar.present? %>
       <%= (cl_image_tag @user.avatar, width: 200, height: 200, crop: :thumb, radius: :max) %>
       <% else %>
@@ -15,7 +15,7 @@
         </div>
       </div>
     </div>
-    <div class="row_about">
+     <div class="row_about">
       <div>
         <h3>About</h3>
       </div>
@@ -23,7 +23,7 @@
         <p><%= @user.about %></p>
       </div>
     </div>
-  </div>
+    </div>
   <div class="card_container">
     <h3>My Spaces</h3>
     <div class="row_card">
