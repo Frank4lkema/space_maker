@@ -23,6 +23,13 @@
   border-radius: 5px;
 }
 
+.card-header{
+  color: #AB11C1;
+  a:hover{
+    color: #AB11C1;
+  }
+}
+
 .card-image {
   height: 150px;
   max-width: 150px;
@@ -32,12 +39,13 @@
 .list-card-info {
   overflow: hidden;
   margin: 2% 0 0 35%;
-}
-
-.list-card-info p {
+  a:hover{
+    text-decoration: none !important;
+  }
+  p {
   margin: 0px;
-}
-
-.list-card-info h3 {
+  }
+  h3 {
   margin: 0px;
+  }
 }

@@ -15,7 +15,7 @@
       <% end %>
       <div class="list-card-info">
         <%= link_to space_path(space) do %>
-          <h3><%= space.name %></h3>
+          <h3 class="card-header"><%= space.name %></h3>
         <% end %>
         <p><strong>Owner: </strong><%= space.user.name %></p>
         <p><strong>Address: </strong><%= space.address %></p>
