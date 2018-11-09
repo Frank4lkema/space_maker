@@ -6,9 +6,11 @@
       <%= f.input :email %>
       <%= f.input :phone_number %>
       <%= f.input :about %>
-      <%= f.label "Avatar upload" %>
-      <%= f.file_field :avatar, :multiple => false %>
-      <%= f.input :avatar_cache, as: :hidden %>
+      <div class="form-group">
+        <%= f.label "Avatar upload" %>
+        <%= f.file_field :avatar, :multiple => false %>
+        <%= f.input :avatar_cache, as: :hidden %>
+      </div>
       <%= f.button :submit, class: "button button-green", style: "margin-top: 20px" %>
     <% end %>
   </div>

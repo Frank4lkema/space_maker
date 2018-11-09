@@ -1,20 +1,22 @@
 <!-- the following code should alsways be on top -->
-<% if !current_user %>
-  <div class="link-wrapper-out">
-    <%= link_to "Go back", spaces_path, class: "button button-primary"  %>
-  </div>
-  <% else %>
-  <div class="link-wrapper-in">
-    <%= link_to "Go back", spaces_path, class: "button button-primary"  %>
-    <%= link_to "Edit space", space_edit_path, class: "button button-green" %>
-  </div>
-<% end %>
 <% array_of_photos = [] %>
 <% @space.pictures.each do |picture| %>
   <% array_of_photos << (cl_image_tag picture.photo, height: 300, width: 400, crop: :fill)%>
-
 <% end %>
-<div class="show-container">
+
+<div class="show-container add-bottom-margin">
+  <div class="row">
+    <% if !current_user %>
+      <div class="link-wrapper-out">
+        <%= link_to "Go back", spaces_path, class: "button button-primary"  %>
+      </div>
+      <% else %>
+      <div class="link-wrapper-in">
+        <%= link_to "Go back", spaces_path, class: "button button-primary"  %>
+        <%= link_to "Edit space", space_edit_path, class: "button button-green" %>
+      </div>
+    <% end %>
+  </div>
   <div class="row">
     <div class="space-information">
       <h3><%= @space.name.capitalize %></h3>
@@ -22,13 +24,15 @@
       <div class = "photo-container">
         <%= render "shared/photo", array_of_photos: array_of_photos %>
       </div>
+
       <h3>Space information:</h3>
       <p><strong>Name: </strong><%= @space.name %></p>
       <p><strong>Address: </strong><%= @space.address %></p>
       <p><strong>Capacity: </strong><%= @space.capacity %> m³</p>
       <p><strong>Price: </strong>€ <%= @space.price %> (per month)</p>
-      <%= link_to "Owner Profile", user_path(@space.user), class: "button button-green owner-button" %>
+      <p><strong>Owner: </strong> <%= link_to @space.user.name, user_path(@space.user) %></p>
     </div>
+
     <div class="space-information">
       <%= simple_form_for @booking do |b| %>
         <%= b.hidden_field :space_id, :value => @space.id %>

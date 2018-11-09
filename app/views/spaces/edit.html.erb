@@ -7,10 +7,12 @@
         <%= f.input :price %>
         <%= f.input :capacity %>
         <%= f.input :description %>
-        <%= f.fields_for :pictures_attributes do |p| %>
-          <%= p.label :photo %><br>
-          <%= p.file_field :photo, :multiple => true, name: "pictures[photo][]"%>
-        <% end %>
+        <div class="form-group">
+          <%= f.fields_for :pictures_attributes do |p| %>
+            <%= p.label :photo %><br>
+            <%= p.file_field :photo, :multiple => true, name: "pictures[photo][]"%>
+          <% end %>
+        </div>
           <%= f.button :submit, class: "button button-green", style: "margin-top: 20px" %>
       <% end %>
     </div>

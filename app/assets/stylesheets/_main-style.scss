@@ -47,7 +47,6 @@ p {
 .button {
   display: inline-block;
   padding: 8px 20px 12px;
-  border-radius: 2px;
   letter-spacing: 0.2px;
   color: #fff !important;
   transition: all 150ms ease;
@@ -167,7 +166,7 @@ input {
   border-radius: 0px !important;
   border: none !important;
   box-shadow: none !important;
-  color: #666 !important;
+  color: #000 !important;
 }
 
 textarea {
@@ -194,6 +193,11 @@ textarea {
   padding: 40px 25px;
 }
 
+.form-group {
+  background-color: #fff;
+  padding: 20px;
+}
+
 .form-h1-title {
   margin-bottom: 30px;
 }
@@ -207,7 +211,7 @@ textarea {
     color: #fff;
   }
   label {
-    color: #fff;
+    color: #000;
   }
   input {
     color: #444;
