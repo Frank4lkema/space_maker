@@ -151,8 +151,7 @@ label {
 }
 
 select {
-  border-radius: 0px !important;
-  border: none !important;
+  border: 1px solid $purple !important;
   box-shadow: none !important;
   -webkit-appearance: none;
   letter-spacing: 0.2px;
@@ -163,15 +162,14 @@ select {
 }
 
 input {
-  border-radius: 0px !important;
-  border: none !important;
+  border-color: $purple !important;
+  border-width: 1px !important;
   box-shadow: none !important;
   color: #000 !important;
 }
 
 textarea {
-  border-radius: 0px !important;
-  border: none !important;
+  border: 1px solid $purple !important;
   box-shadow: none !important;
   -webkit-appearance: none;
   color: #666 !important;
@@ -188,14 +186,9 @@ textarea {
 }
 
 .form-holder {
-  background-color: $purple;
+  background-color: #fff;
   width: 50%;
   padding: 40px 25px;
-}
-
-.form-group {
-  background-color: #fff;
-  padding: 20px;
 }
 
 .form-h1-title {
@@ -206,15 +199,20 @@ textarea {
   border-radius: 0px !important;
 }
 
+#form-button {
+  border: none;
+  color: #fff !important;
+}
+
 .form-text-white {
   h1 {
-    color: #fff;
+    color: #000;
   }
   label {
     color: #000;
   }
   input {
-    color: #444;
+    color: #444 !important;
   }
 }
 

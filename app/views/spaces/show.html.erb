@@ -39,7 +39,7 @@
         <%= b.input :start_date %>
         <%= b.input :end_date %>
         <%= b.input :rent, collection: 0..@space.capacity %>
-        <%= b.button :submit, class: "button button-green" %>
+        <%= b.button :submit, class: "button button-green", id: "form-button" %>
       <% end %>
     </div>
   </div>
