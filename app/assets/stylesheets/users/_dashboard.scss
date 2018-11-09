@@ -15,7 +15,7 @@
     grid-row: 1 / span 1;
     grid-column: 2 / span 3;
     padding: 0px 0px;
-    border-bottom: 2px solid #159CBC;
+    border-bottom: 2px solid $purple;
     position: relative;
     h1:last-child {
       color: #aaa;
@@ -45,7 +45,7 @@
 .dashboard-info-title {
   a {
     margin: 0px;
-    color: #159CBC;
+    color: $purple;
   }
 }
 
@@ -61,10 +61,10 @@
 
 .dashboard-list-header {
   display: flex;
-  color: #159CBC;
+  color: #999;
   background-color: #fff;
   padding: 10px 10px;
-  border-bottom: 2px solid #159CBC;
+  border-bottom: 2px solid $purple;
   h3 {
     margin: 0px;
     flex: 1 0 auto;
@@ -73,7 +73,7 @@
 
 .dashboard-list {
   background-color: #fff;
-  border-bottom: 2px solid #159CBC;
+  border-bottom: 2px solid $purple;
   min-height: 5px;
 }
 
@@ -88,7 +88,7 @@
 }
 
 .dashboard-list-item:last-child {
-  border-bottom: 0px solid #159CBC;
+  border: none;
 }
 
 .dashboard-list-text {
@@ -108,7 +108,7 @@
 
 .dashboard-add:hover {
   text-decoration: none;
-  color: #159CBC !important;
+  color: $purple !important;
 }
 
 .dashboard-edit {
@@ -118,7 +118,7 @@
 
 .dashboard-edit:hover {
   text-decoration: none;
-  color: #159CBC;
+  color: $purple;
 }
 
 .dashboard-delete {
@@ -139,7 +139,7 @@
 
 .dashboard-info-edit:hover {
   text-decoration: none;
-  color: #159CBC;
+  color: $purple;
 }
 
 .dashboard-link {
@@ -148,7 +148,7 @@
 
 .dashboard-link:hover {
   text-decoration: none;
-  color: #159CBC !important;
+  color: $purple !important;
 }
 
 
