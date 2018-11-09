@@ -6,22 +6,22 @@
       <% else %>
       <%= image_tag "dumb_avatar.png", class: "avatar"%>
       <% end %>
+      <div class="username">
+        <div>
+          <h2><%= @user.name.capitalize %></h2>
+        </div>
+        <div>
+          <p>Rating: 4/5 </p>
+        </div>
+      </div>
     </div>
-    <div class="username">
+    <div class="row_about">
       <div>
-        <h2><%= @user.name.capitalize %></h2>
+        <h3>About</h3>
       </div>
       <div>
-        <p>Rating: 4/5 </p>
+        <p><%= @user.about %></p>
       </div>
-    </div>
-  </div>
-  <div class="row_about">
-    <div>
-      <h3>About</h3>
-    </div>
-    <div>
-      <p><%= @user.about %></p>
     </div>
   </div>
   <div class="card_container">

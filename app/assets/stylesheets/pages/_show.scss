@@ -1,3 +1,8 @@
+.row {
+  display: flex;
+  margin-bottom: 40px;
+  width: 95%;
+}
 #top_row {
   margin-top: 30px;
 }
@@ -7,6 +12,11 @@
   height: 200px;
 }
 
+.avatar {
+  display: flex;
+  padding-bottom: 20px;
+}
+
 // .avatar img:hover {
 //   box-shadow: 0 0 5px black;
 // }
@@ -14,6 +24,7 @@
 .username {
   margin-left: 50px;
   line-height: 140px;
+  margin-top: 60px;
 }
 
 .row_about {
@@ -24,4 +35,5 @@
   border-style: solid;
   padding: 20px;
   margin-top: 40px;
+  min-width: 50%;
 }
