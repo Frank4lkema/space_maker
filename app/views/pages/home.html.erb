@@ -21,9 +21,13 @@
       <h3>Why use space maker?</h3>
       <p>Let’s face it, most of us can afford less and less space in the big cities we call home. But what are we supposed to do with all of our stuff? Space maker helps you find unutilized space near you! Save money and save space. </p>
       <% if user_signed_in? %>
-        <%= link_to "Spaces", dashboard_path, class: "button button-primary"  %>
+        <div class="homepage-button-flex">
+          <%= link_to "Spaces", dashboard_path, class: "button button-primary"  %>
+        </div>
       <% else %>
-        <%= link_to "Register", new_user_registration_path, class: "button button-primary"  %>
+        <div class="homepage-button-flex">
+          <%= link_to "Register", new_user_registration_path, class: "button button-primary"  %>
+        </div>
       <% end %>
     </div>
   </div>
@@ -44,9 +48,13 @@
       <h4>Here is why our competitor is not.</h4>
       <p>Traditional storage units are usually located outside of the city limits making the task of getting something of yours rather challenging. Did we mention how much more expensive they are?</p>
       <% if user_signed_in? %>
-        <%= link_to "Spaces", dashboard_path, class: "button button-primary"  %>
+        <div class="homepage-button-flex">
+          <%= link_to "Spaces", dashboard_path, class: "button button-primary"  %>
+        </div>
       <% else %>
-        <%= link_to "Register", new_user_registration_path, class: "button button-primary"  %>
+        <div class="homepage-button-flex">
+          <%= link_to "Register", new_user_registration_path, class: "button button-primary"  %>
+        </div>
       <% end %>
     </div>
   </div>
@@ -59,9 +67,13 @@
       <p>If you happen to be one of the lucky ones with extra unutilized space on your hands, start generating income by storing your neighbor’s things! Who knew doing so little could pay so well.
       </p>
       <% if user_signed_in? %>
-        <%= link_to "Spaces", dashboard_path, class: "button button-primary"  %>
+        <div class="homepage-button-flex">
+          <%= link_to "Spaces", dashboard_path, class: "button button-primary"  %>
+        </div>
       <% else %>
-        <%= link_to "Register", new_user_registration_path, class: "button button-primary"  %>
+        <div class="homepage-button-flex">
+          <%= link_to "Register", new_user_registration_path, class: "button button-primary"  %>
+        </div>
       <% end %>
     </div>
   </div>
