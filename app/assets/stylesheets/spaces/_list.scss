@@ -16,10 +16,11 @@
 .list-card {
   flex: 1 0 auto;
   max-width: 500px;
+  padding: 15px;
+  margin-bottom: 5%;
   background-color: #fff;
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.07), 0 1px 0 0 rgba(0, 0, 0, 0.03);
-  margin-bottom: 5%;
-  padding: 15px;
+  border-radius: 5px;
 }
 
 .card-image {
