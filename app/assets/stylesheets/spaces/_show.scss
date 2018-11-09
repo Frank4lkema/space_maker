@@ -25,8 +25,12 @@
 }
 
 .link-wrapper-in{
-  width: 39%;
-  margin: 30px 0;
+  width: 29%;
+  margin: 30px 0 30px 5%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.owner-button{
+  margin-top: 10px;
 }
