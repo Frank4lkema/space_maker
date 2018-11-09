@@ -3,6 +3,7 @@
   background-size: 100%;
   margin: 0px;
   width: 100%;
+  min-height: 520px;
 }
 
 .form {
@@ -16,6 +17,20 @@
   background:rgba(255,255,255,0.3);
 }
 
+.form-check{
+  display: flex;
+  align-items: center;
+}
+
 .form-actions {
   color: black;
+}
+
+#user_remember_me, .form-check-label{
+  margin: 0;
+  padding: 0;
+}
+
+.form a{
+  color: #fff;
 }
