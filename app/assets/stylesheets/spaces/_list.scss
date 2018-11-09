@@ -1,5 +1,5 @@
 .main-container{
-  max-width: 80% !important;
+  max-width: 90% !important;
 }
 
 .list-container{
@@ -14,8 +14,10 @@
 }
 
 .list-card {
+  display: flex;
+  align-items: center;
   flex: 1 0 auto;
-  max-width: 500px;
+  max-width: 560px;
   padding: 15px;
   margin-bottom: 5%;
   background-color: #fff;
@@ -38,7 +40,7 @@
 
 .list-card-info {
   overflow: hidden;
-  margin: 2% 0 0 35%;
+  margin-left: 10px;
   a:hover{
     text-decoration: none !important;
   }
