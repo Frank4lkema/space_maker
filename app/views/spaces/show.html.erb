@@ -28,7 +28,7 @@
       <h3>Space information:</h3>
       <p><strong>Name: </strong><%= @space.name %></p>
       <p><strong>Address: </strong><%= @space.address %></p>
-      <p><strong>Capacity: </strong><%= @space.capacity %> m³</p>
+      <p><strong>Capacity: </strong><%= @space.capacity %> m²</p>
       <p><strong>Price: </strong>€ <%= @space.price %> (per month)</p>
       <p><strong>Owner: </strong> <%= link_to @space.user.name, user_path(@space.user) %></p>
     </div>
