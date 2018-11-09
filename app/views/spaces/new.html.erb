@@ -3,7 +3,7 @@
     <h1 class="form-h1-title">Add space</h1>
     <%= simple_form_for(@space) do |f| %>
       <%= f.input :name %>
-      <%= f.input :address %>
+      <%= f.input :address, input_html: { id: 'space_address' }%>
       <%= f.input :price %>
       <%= f.input :capacity %>
       <%= f.input :description %>
