@@ -25,10 +25,10 @@ class SpacesController < ApplicationController
     @space = Space.new()
 
     # everything below here is for presetation
-    @space.name = "Franks Garage"
+    @space.name = "My Basement"
     @space.capacity = 12
-    @space.price = 200
-    @space.description = "A very clean garage in Utrecht "
+    @space.price = 25
+    @space.description = "A very clean basement in the center of Amsterdam"
     @pictures= @space.pictures.build
 
     authorize @space

@@ -11,7 +11,7 @@
 
   <div class="dashboard-grid-info">
     <h1 class="dashboard-info-title"><%= link_to @user.name, user_path(@user) %></h1>
-    <%= link_to "", user_edit_path(@user), class: "far fa-edit dashboard-info-edit edit-icon" %>
+    <%= link_to "", user_edit_path(@user), class: "fas fa-user-edit dashboard-info-edit edit-icon" %>
     <p class="dashboard-info-text">phone number: <%= @user.phone_number %></p>
     <p class="dashboard-info-text">email: <%= @user.email %></p>
   </div>
@@ -26,8 +26,8 @@
         <div class="dashboard-list-item" data-space-id="<%= space.id %>">
           <%= link_to space.name, space_path(space), class: "dashboard-list-text dashboard-link" %>
           <div>
-            <%= link_to "", space_edit_path(space), class: "far fa-edit dashboard-edit" %>
-            <%= link_to "", delete_space_path(space), method: :delete, remote: true, class: "fas fa-times dashboard-edit"%>
+            <%= link_to "", space_edit_path(space), class: "fas fa-pencil-alt dashboard-edit" %>
+            <%= link_to "", delete_space_path(space), method: :delete, remote: true, class: "fas fa-times dashboard-delete"%>
           </div>
         </div>
       <% end %>
