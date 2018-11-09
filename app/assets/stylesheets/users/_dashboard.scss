@@ -85,7 +85,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 0px;
+  padding: 5px 4px 5px 0px;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
   min-height: 40px;
@@ -116,8 +116,9 @@
 }
 
 .dashboard-edit {
-  font-size: 16px;
+  font-size: 14px;
   color: #ddd;
+  margin-left: 10px;
 }
 
 .dashboard-edit:hover {
