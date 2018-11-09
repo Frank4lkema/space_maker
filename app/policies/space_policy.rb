@@ -29,4 +29,8 @@ class SpacePolicy < ApplicationPolicy
     update?
   end
 
+  def destroy?
+    true
+  end
+
 end

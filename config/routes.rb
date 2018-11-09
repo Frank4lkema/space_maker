@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   post "spaces", to: "spaces#create"
   get "space/:id/edit", to: 'spaces#edit', as: :space_edit
   get "user/:id/edit", to: 'users#edit', as: :user_edit
-  delete "space/:id", to: 'spaces#destroy'
+  delete "space/:id", to: 'spaces#destroy', as: :delete_space
   get "picture/:id", to: "pictures#edit", as: :edit_picture
   # patch "picture/:id", to: "pictures#update", as: :picture
   get "space/:id", to: "spaces#show", as: :space

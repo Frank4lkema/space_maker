@@ -23,9 +23,12 @@
     </div>
     <div class="dashboard-list">
       <% @user.spaces.each do |space| %>
-        <div class="dashboard-list-item">
+        <div class="dashboard-list-item" data-space-id="<%= space.id %>">
           <%= link_to space.name, space_path(space), class: "dashboard-list-text dashboard-link" %>
-          <%= link_to "", space_edit_path(space), class: "far fa-edit dashboard-edit" %>
+          <div>
+            <%= link_to "", space_edit_path(space), class: "far fa-edit dashboard-edit" %>
+            <%= link_to "", delete_space_path(space), method: :delete, class: "fas fa-times dashboard-edit"%>
+          </div>
         </div>
       <% end %>
     </div>

@@ -61,6 +61,14 @@ class SpacesController < ApplicationController
     end
   end
 
+  def destroy
+
+    @space = Space.find(params[:id])
+    authorize @space
+    @space.destroy
+    redirect_to dashboard_path
+  end
+
   private
 
   def space_params
