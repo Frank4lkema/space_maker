@@ -2,9 +2,6 @@
   <div class="banner-content">
     <h1 id="banner-heading1">Space  Maker</h1>
     <h2 id="banner-heading2">"Get your space on"</h2>
-    <%= link_to "Register", new_user_registration_path, class: "button button-primary"  %>
-    <h1>Space  Maker</h1>
-    <h2>"Get your space on"</h2>
     <% if user_signed_in? %>
       <%= link_to "Spaces", dashboard_path, class: "button button-primary"  %>
     <% else %>
@@ -31,13 +28,13 @@
     </div>
   </div>
   <div class="two-column-content">
-    <p>image</p>
+    <%= image_tag "homepage-boxes.svg", class: "homepage-image" %>
   </div>
 </div>
 
 <div class="multi-column-container">
   <div class="two-column-content">
-    <p>image</p>
+    <%= image_tag "homepage-neighbors.svg", class: "homepage-image" %>
   </div>
   <div class="two-column-content">
     <div>
@@ -69,19 +66,17 @@
     </div>
   </div>
   <div class="two-column-content">
-    <p>image</p>
+    <%= image_tag "homepage-garage.svg", class: "homepage-image" %>
   </div>
 </div>
 
-<div class="main-container">
-  <div class="one-column-content">
-    <div class="centered-text">
-      <h3>Just sign up!</h3>
-      <% if user_signed_in? %>
-        <%= link_to "Spaces", dashboard_path, class: "button button-primary"  %>
-      <% else %>
-        <%= link_to "Register", new_user_registration_path, class: "button button-primary"  %>
-      <% end %>
+<% if !user_signed_in? %>
+  <div class="main-container">
+    <div class="one-column-content">
+      <div class="centered-text">
+        <h3>Just sign up!</h3>
+          <%= link_to "Register", new_user_registration_path, class: "button button-primary"  %>
+      </div>
     </div>
   </div>
-</div>
+<% end %>
