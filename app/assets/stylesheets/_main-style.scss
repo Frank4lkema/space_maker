@@ -216,5 +216,21 @@ textarea {
   }
 }
 
+.notice, .alert{
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+}
+
+.notice{
+  background-color: $purple;
+}
+
+.alert{
+  background-color: #EB4F4E;
+}
 
 
