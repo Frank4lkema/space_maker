@@ -168,7 +168,7 @@ input {
   border-radius: 0px !important;
   border: none !important;
   box-shadow: none !important;
-  color: #fff;
+  color: #666 !important;
 }
 
 textarea {
@@ -176,6 +176,7 @@ textarea {
   border: none !important;
   box-shadow: none !important;
   -webkit-appearance: none;
+  color: #666 !important;
 }
 
 .d-flex {
@@ -189,14 +190,17 @@ textarea {
 }
 
 .form-holder {
-  background-color: #159CBC;
-  min-width: 35vw;
+  background-color: $purple;
+  width: 50%;
   padding: 40px 25px;
-  border-radius: 25px;
 }
 
 .form-h1-title {
   margin-bottom: 30px;
+}
+
+#user_avatar {
+  border-radius: 0px !important;
 }
 
 .form-text-white {
