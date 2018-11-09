@@ -2,9 +2,6 @@
   <div class="banner-content">
     <h1 id="banner-heading1">Space  Maker</h1>
     <h2 id="banner-heading2">"Get your space on"</h2>
-    <%= link_to "Register", new_user_registration_path, class: "button button-primary"  %>
-    <h1>Space  Maker</h1>
-    <h2>"Get your space on"</h2>
     <% if user_signed_in? %>
       <%= link_to "Spaces", dashboard_path, class: "button button-primary"  %>
     <% else %>
