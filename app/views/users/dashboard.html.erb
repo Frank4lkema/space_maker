@@ -27,7 +27,7 @@
           <%= link_to space.name, space_path(space), class: "dashboard-list-text dashboard-link" %>
           <div>
             <%= link_to "", space_edit_path(space), class: "far fa-edit dashboard-edit" %>
-            <%= link_to "", delete_space_path(space), method: :delete, class: "fas fa-times dashboard-edit"%>
+            <%= link_to "", delete_space_path(space), method: :delete, remote: true, class: "fas fa-times dashboard-edit"%>
           </div>
         </div>
       <% end %>
