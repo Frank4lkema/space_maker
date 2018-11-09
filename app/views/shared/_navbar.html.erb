@@ -13,10 +13,6 @@
     <% if !current_user %>
       <%= link_to "Log in", new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
-    <% if current_user %>
-      <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "navbar-wagon-item navbar-wagon-link" %>
-    <% end %>
-
     <!-- Avatar with dropdown menu -->
     <div class="navbar-wagon-item">
       <div class="dropdown">
@@ -29,6 +25,9 @@
           <li>
             <%= link_to dashboard_path do %>
               <i class="fa fa-user"></i> <%= t(".profile", default: "Dashboard") %>
+            <% end %>
+            <% if current_user %>
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "navbar-wagon-item navbar-wagon-link" %>
             <% end %>
           </li>
         </ul>
