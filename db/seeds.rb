@@ -29,42 +29,42 @@ users = User.create!([
 spaces = Space.create!([
   {
     name: "Frank's Basement",
-    address: "Oudwijkervelststraat, Utrecht",
+    address: "Oudwijkervelststraat 97, Utrecht",
     capacity: 5,
     price: 120.50,
     user_id: users[0].id
   },
   {
     name: "Elad's Basement",
-    address: "Prins Karelgrach, Amsterdam",
+    address: "Amsteldijk 13, Amsterdam",
     capacity: 10,
     price: 200.00,
     user_id: users[1].id
   },
   {
     name: "Elad's Shak",
-    address: "Prins Karelgrach, Amsterdam",
+    address: "Amsteldijk 17, Amsterdam",
     capacity: 5,
     price: 150.00,
     user_id: users[1].id
   },
   {
     name: "Rob's Basement",
-    address: "Amsterdamsestraatweg, Utrecht",
+    address: "Amsterdamsestraatweg 80, Utrecht",
     capacity: 7,
     price: 100.00,
     user_id: users[0].id
   },
   {
     name: "Rob's Addic",
-    address: "Amsterdamsestraatweg, Utrecht",
+    address: "Amsterdamsestraatweg 101, Utrecht",
     capacity: 10,
     price: 200.00,
     user_id: users[1].id
   },
   {
     name: "Frank's Addic",
-    address: "Oudwijkervelststraat, Utrecht",
+    address: "Oudwijkervelststraat 79, Utrecht",
     capacity: 12,
     price: 200.00,
     user_id: users[1].id
