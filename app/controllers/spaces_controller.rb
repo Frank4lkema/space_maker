@@ -17,8 +17,8 @@ class SpacesController < ApplicationController
     authorize @space
 
     @booking = Booking.new
-    @booking.end_date = 30.days.from_now
-    @booking.rent = 5
+    @booking.end_date = 30.days.from_now # Just here for presentation
+    @booking.rent = 5 # just here for presentation
   end
 
   def new
