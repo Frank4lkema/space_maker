@@ -1,20 +1,19 @@
-  <div class = "main-container">
-    <div class=" max-with">
-      <h1><%= @space.name %></h1>
-
+  <div class="main-container primary-bg">
+    <div class="form-holder form-text-white">
+      <h1 class="form-h1-title">Edit <%= @space.name %></h1>
       <%= simple_form_for(@space) do |f| %>
-      <%= f.input :name %>
-      <%= f.input :address %>
-      <%= f.input :price %>
-      <%= f.input :capacity %>
-      <%= f.input :description %>
-      <%= f.fields_for :pictures_attributes do |p| %>
-        <%= p.label :photo %><br>
-        <%= p.file_field :photo, :multiple => true, name: "pictures[photo][]"%>
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :price %>
+        <%= f.input :capacity %>
+        <%= f.input :description %>
+        <%= f.fields_for :pictures_attributes do |p| %>
+          <%= p.label :photo %><br>
+          <%= p.file_field :photo, :multiple => true, name: "pictures[photo][]"%>
+        <% end %>
+          <%= f.button :submit, class: "button button-green", style: "margin-top: 20px" %>
       <% end %>
-      <%= f.button :submit, class: "button button-green" %>
-    <% end %>
-   </div>
+    </div>
 
   <div class="box-around-pictures">
     <div class= "inline-pictures">

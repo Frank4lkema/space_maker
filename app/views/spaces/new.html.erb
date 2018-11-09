@@ -1,17 +1,17 @@
-<h1>Let's add a new space! </h1>
-
-<p><%= current_user.name %></p>
-
-<%= simple_form_for(@space) do |f| %>
-<%= f.input :name %>
-<%= f.input :address %>
-<%= f.input :price %>
-<%= f.input :capacity %>
-<%= f.input :description %>
-<%= f.fields_for :pictures_attributes do |p| %>
-  <%= p.label :photo %><br>
-  <%= p.file_field :photo, :multiple => true, name: "pictures[photo][]"%>
-   <% end %>
-<%= f.button :submit, class: "button button-green" %>
-
-<% end %>
+<div class="main-container primary-bg">
+  <div class="form-holder form-text-white">
+    <h1 class="form-h1-title">Add space</h1>
+    <%= simple_form_for(@space) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :address %>
+      <%= f.input :price %>
+      <%= f.input :capacity %>
+      <%= f.input :description %>
+      <%= f.fields_for :pictures_attributes do |p| %>
+        <%= p.label :photo %><br>
+        <%= p.file_field :photo, :multiple => true, name: "pictures[photo][]"%>
+         <% end %>
+      <%= f.button :submit, class: "button button-green", style: "margin-top: 20px" %>
+    <% end %>
+  </div>
+</div>

@@ -1,16 +1,15 @@
 <div class="main-container primary-bg">
-  <div>
-    <div class="form-holder form-text-white">
-      <h1 class="form-h1-title">Edit profile</h1>
-      <%= simple_form_for(@user) do |f| %>
-        <%= f.input :name %>
-        <%= f.input :email %>
-        <%= f.input :phone_number %>
-        <%= f.input :about %>
-        <%= f.file_field :avatar, :multiple => false %>
-        <%= f.input :avatar_cache, as: :hidden %>
-        <%= f.button :submit, class: "button button-green" %>
-      <% end %>
-    </div>
+  <div class="form-holder form-text-white">
+    <h1 class="form-h1-title">Edit profile</h1>
+    <%= simple_form_for(@user) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :email %>
+      <%= f.input :phone_number %>
+      <%= f.input :about %>
+      <%= f.label "Avatar upload" %>
+      <%= f.file_field :avatar, :multiple => false %>
+      <%= f.input :avatar_cache, as: :hidden %>
+      <%= f.button :submit, class: "button button-green", style: "margin-top: 20px" %>
+    <% end %>
   </div>
 </div>
